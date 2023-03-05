@@ -5,6 +5,13 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ```bash
 npx create-next-app@latest --typescript
+
+# yarn
+corepack enable
+corepack prepare yarn@stable --activate
+yarn set version stable
+
+yarn create next-app --typescript
 ```
 
 ## Deploy on Vercel
