@@ -2,14 +2,14 @@
 The portfolio is built with Next.js and Tailwind CSS. 
 
 - [The Resume and Portfolio](#the-resume-and-portfolio)
-  - [Installing Next.js](#installing-nextjs)
+  - [Install Next.js](#install-nextjs)
   - [Install Tailwind CSS with Next.js](#install-tailwind-css-with-nextjs)
     - [Add the paths to all of your template files in your **tailwind.config.js** file:](#add-the-paths-to-all-of-your-template-files-in-your-tailwindconfigjs-file)
     - [Add the @tailwind directives for each Tailwind’s layers to your **globals.css** file:](#add-the-tailwind-directives-for-each-tailwinds-layers-to-your-globalscss-file)
   - [Deploy on Vercel](#deploy-on-vercel)
 
 
-## Installing Next.js
+## Install Next.js
 [Next.js](https://nextjs.org/docs/getting-started) is a flexible React framework that gives you building blocks to create fast web applications.
 
 ```bash
