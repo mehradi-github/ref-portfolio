@@ -24,26 +24,6 @@ const Layout: FC = () => {
       <Portfolio />
       <Blog />
       <Contact />
-
-      <Script id="show-banner" strategy="afterInteractive">
-        {`
-          if (
-            localStorage.theme === "dark" ||
-            (!("theme" in localStorage) &&
-              window.matchMedia("(prefers-color-scheme: dark)").matches)
-          ) {
-            document.documentElement.classList.add("dark")
-          } else {
-            document.documentElement.classList.remove("dark")
-          }
-        
-         // localStorage.theme = "light";
-        
-          //localStorage.theme = "dark";
-        
-        //  localStorage.removeItem("theme");
-        `}
-      </Script>
     </Fragment>
   );
 };
