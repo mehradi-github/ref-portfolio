@@ -7,6 +7,8 @@ import Contact from "@/components/Contact";
 import About from "@/components/About";
 import Portfolio from "@/components/Portfolio";
 import Blog from "@/components/Skills";
+import Script from "next/script";
+import DarkMode from "@/utilits/darkMode";
 const Layout: FC = () => {
   return (
     <Fragment>
@@ -22,6 +24,26 @@ const Layout: FC = () => {
       <Portfolio />
       <Blog />
       <Contact />
+
+      <Script id="show-banner" strategy="afterInteractive">
+        {`
+          if (
+            localStorage.theme === "dark" ||
+            (!("theme" in localStorage) &&
+              window.matchMedia("(prefers-color-scheme: dark)").matches)
+          ) {
+            document.documentElement.classList.add("dark")
+          } else {
+            document.documentElement.classList.remove("dark")
+          }
+        
+         // localStorage.theme = "light";
+        
+          //localStorage.theme = "dark";
+        
+        //  localStorage.removeItem("theme");
+        `}
+      </Script>
     </Fragment>
   );
 };
