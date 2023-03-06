@@ -49,7 +49,7 @@ const Header: FC = () => {
           </a>
           <div className="text-gray-500 font-bold text-xl"> Profile</div>
           {/* Mobile menu button */}
-          <div className="flex lg:hidden">
+          <div className="flex md:hidden">
             <button
               onClick={() => setisOpen(!isOpen)}
               className="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400"
