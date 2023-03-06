@@ -1,7 +1,7 @@
-# The Portfolio
+# The Resume and Portfolio
 The portfolio is built with Next.js and Tailwind CSS. 
 
-- [The Portfolio](#the-portfolio)
+- [The Resume and Portfolio](#the-resume-and-portfolio)
   - [Installing Next.js](#installing-nextjs)
   - [Install Tailwind CSS with Next.js](#install-tailwind-css-with-nextjs)
     - [Add the paths to all of your template files in your **tailwind.config.js** file:](#add-the-paths-to-all-of-your-template-files-in-your-tailwindconfigjs-file)
@@ -57,6 +57,11 @@ module.exports = {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+```
+
+```bash
+npm i react-icons
+npm i -D tailwind-styled-components
 ```
 ## Deploy on Vercel
 
