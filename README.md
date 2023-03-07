@@ -62,7 +62,7 @@ module.exports = {
 ```bash
 # npx create-next-app@latest  -e with-tailwindcss ref-portfolio --typescript
 npm i react-icons next-themes
-npm i -D tailwind-styled-components
+npm i -D sass tailwind-styled-components
 ```
 ## Deploy on Vercel
 

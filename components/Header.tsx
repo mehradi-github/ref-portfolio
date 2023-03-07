@@ -1,5 +1,5 @@
 import { useTheme } from "next-themes";
-import React, { FC, useEffect, useState } from "react";
+import React, { FC, useEffect, useState, useRef } from "react";
 import {
   IoInformationCircle,
   IoMenu,
@@ -8,7 +8,9 @@ import {
   IoMoon,
 } from "react-icons/io5";
 import tw from "tailwind-styled-components";
+
 const Header: FC = () => {
+  const navbarRef = useRef<HTMLInputElement>(null);
   const [isOpen, setisOpen] = useState(false);
   const { systemTheme, theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
@@ -16,6 +18,18 @@ const Header: FC = () => {
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  useEffect(() => {
+    var navbar = navbarRef.current;
+    if (window.pageYOffset > 300) navbar?.setAttribute("data-state", "scroll");
+    else navbar?.setAttribute("data-state", "");
+
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > 300)
+        navbar?.setAttribute("data-state", "scroll");
+      else navbar?.setAttribute("data-state", "");
+    });
+  }, [navbarRef]);
 
   const renderThemeChanger = () => {
     if (!mounted) return null;
@@ -41,7 +55,10 @@ const Header: FC = () => {
   };
 
   return (
-    <nav className="relative bg-white shadow dark:bg-gray-800">
+    <nav
+      ref={navbarRef}
+      className="relative bg-white shadow dark:bg-gray-800 data-[state=scroll]:nav-scroll"
+    >
       <div className="container px-6 py-3 mx-auto md:flex">
         <div className="flex items-center justify-between">
           <a href="">
@@ -64,9 +81,11 @@ const Header: FC = () => {
           </div>
         </div>
         <NavLinks $isOpen={isOpen}>
-          <div className="flex flex-col px-2 -mx-4 mt-2 md:flex-row md:mx-10 md:py-0">
+          <div className="flex flex-col px-2-mx-4 mt-2 md:flex-row md:mx-10 md:py-0">
             <NavLink href="#hero">Home</NavLink>
-            <NavLink href="#about">About</NavLink>
+            <NavLink data-state="ok" href="#about">
+              About
+            </NavLink>
             <NavLink href="#portfolio">Portfolio</NavLink>
             <NavLink href="#skills">Skills</NavLink>
             <NavLink href="#contact">Contact</NavLink>
@@ -83,6 +102,7 @@ interface LinksProps {
   $isOpen: boolean;
 }
 const NavLink = tw.a`
+data-[state=ok]:text-red-600 
 hover:text-blue-500 
 px-2.5 
 pt-2 
