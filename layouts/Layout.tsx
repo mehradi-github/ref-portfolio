@@ -9,6 +9,7 @@ import Portfolio from "@/components/Portfolio";
 import Blog from "@/components/Skills";
 import Script from "next/script";
 import DarkMode from "@/utilits/darkMode";
+import ScrollToTop from "@/components/scrollToTop";
 const Layout: FC = () => {
   return (
     <Fragment>
@@ -24,6 +25,7 @@ const Layout: FC = () => {
       <Portfolio />
       <Blog />
       <Contact />
+      <ScrollToTop />
     </Fragment>
   );
 };

@@ -10,7 +10,7 @@ import {
 import tw from "tailwind-styled-components";
 
 const Header: FC = () => {
-  const navbarRef = useRef<HTMLInputElement>(null);
+  const navbarRef = useRef<HTMLElement>(null);
   const [isOpen, setisOpen] = useState(false);
   const { systemTheme, theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
