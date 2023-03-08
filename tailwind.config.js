@@ -14,6 +14,9 @@ module.exports = {
       strokeWidth: {
         4: "4",
       },
+      transitionDuration: {
+        10: "10ms",
+      },
     },
   },
   plugins: [],
