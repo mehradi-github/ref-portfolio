@@ -19,7 +19,7 @@ const Header: FC<P> = ({ refs }) => {
   const { systemTheme, theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const underlineNav = useRef<HTMLSpanElement>(null);
-  const navbarOffset = 150;
+  // const navbarOffset = 150;
   const activeSection = useScrollSpy({
     sectionElementRefs: refs,
     offsetPx: -240,
@@ -83,6 +83,11 @@ md:mx-2`;
   const animateUnderlineNav = () => {
     if (activeSection) {
       console.log(activeSection);
+
+      var navbar = navbarRef.current;
+      if (activeSection > 0) navbar?.setAttribute("data-state", "scroll");
+      else navbar?.setAttribute("data-state", "");
+
       const e = navRefs[activeSection];
       var left = e.current?.offsetLeft;
       var width = e.current?.offsetWidth;
@@ -95,18 +100,18 @@ md:mx-2`;
     animateUnderlineNav();
   }, [activeSection]);
 
-  useEffect(() => {
-    var navbar = navbarRef.current;
-    // if (window.pageYOffset > navbarOffset)
-    //   navbar?.setAttribute("data-state", "scroll");
-    // else navbar?.setAttribute("data-state", "");
+  // useEffect(() => {
+  //   var navbar = navbarRef.current;
+  //   // if (window.pageYOffset > navbarOffset)
+  //   //   navbar?.setAttribute("data-state", "scroll");
+  //   // else navbar?.setAttribute("data-state", "");
 
-    window.addEventListener("scroll", () => {
-      if (window.pageYOffset >= navbarOffset)
-        navbar?.setAttribute("data-state", "scroll");
-      else navbar?.setAttribute("data-state", "");
-    });
-  }, []);
+  //   window.addEventListener("scroll", () => {
+  //     if (window.pageYOffset >= navbarOffset)
+  //       navbar?.setAttribute("data-state", "scroll");
+  //     else navbar?.setAttribute("data-state", "");
+  //   });
+  // }, []);
 
   const renderThemeChanger = () => {
     if (!mounted) return null;
