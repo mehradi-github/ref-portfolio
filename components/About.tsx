@@ -1,8 +1,11 @@
 import React, { FC } from "react";
 
-const About: FC = () => {
+interface P {
+  sctionRef: React.LegacyRef<HTMLElement> | undefined;
+}
+const About: FC<P> = ({ sctionRef }) => {
   return (
-    <section id="about" className="min-h-screen ">
+    <section ref={sctionRef} id="about" className="min-h-screen ">
       About Me
     </section>
   );

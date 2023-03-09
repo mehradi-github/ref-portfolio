@@ -1,8 +1,10 @@
 import React, { FC } from "react";
-
-const Hero: FC = () => {
+interface P {
+  sctionRef: React.LegacyRef<HTMLElement> | undefined;
+}
+const Hero: FC<P> = ({ sctionRef }) => {
   return (
-    <section id="hero" className="min-h-screen bg-indigo-500">
+    <section ref={sctionRef} id="hero" className="min-h-screen bg-indigo-500">
       Hero
     </section>
   );

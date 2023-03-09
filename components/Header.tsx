@@ -8,28 +8,105 @@ import {
   IoMoon,
 } from "react-icons/io5";
 import tw from "tailwind-styled-components";
+import useScrollSpy from "react-use-scrollspy";
 
-const Header: FC = () => {
+interface P {
+  refs: React.RefObject<HTMLElement>[];
+}
+const Header: FC<P> = ({ refs }) => {
   const navbarRef = useRef<HTMLElement>(null);
   const [isOpen, setisOpen] = useState(false);
   const { systemTheme, theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const underlineNav = useRef<HTMLSpanElement>(null);
+  const navbarOffset = 150;
+  const activeSection = useScrollSpy({
+    sectionElementRefs: refs,
+    offsetPx: -240,
+  });
+
+  const navRefs: React.RefObject<HTMLAnchorElement>[] = [
+    useRef<HTMLAnchorElement>(null),
+    useRef<HTMLAnchorElement>(null),
+    useRef<HTMLAnchorElement>(null),
+    useRef<HTMLAnchorElement>(null),
+    useRef<HTMLAnchorElement>(null),
+  ];
+
+  interface LinksProps {
+    $isOpen: boolean;
+  }
+  const TwLink = tw.a`
+hover:text-blue-500 
+px-2.5 
+pb-2 
+text-gray-700 
+transition-all 
+duration-300 
+transform  
+dark:text-gray-200 
+
+active:border-indigo-500 
+active:border-indigo-700 
+dark:active:border-gray-100 
+md:mx-2`;
+
+  const TwLinks = tw.div<LinksProps>`
+  ${(p) =>
+    p.$isOpen ? "translate-x-0 opacity-100 " : "opacity-0 -translate-x-full"}
+  absolute 
+  inset-x-0 
+  z-20 
+  w-full
+  px-6 
+  py-4 
+  transition-all 
+  duration-300 
+  ease-in-out 
+  bg-white 
+  dark:bg-gray-800 
+  md:mt-0 
+  md:p-0 
+  md:top-0 
+  md:relative 
+  md:opacity-100 
+  md:translate-x-0 
+  md:flex 
+  md:items-center 
+  md:justify-between
+  `;
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
+  const animateUnderlineNav = () => {
+    if (activeSection) {
+      console.log(activeSection);
+      const e = navRefs[activeSection];
+      var left = e.current?.offsetLeft;
+      var width = e.current?.offsetWidth;
+      underlineNav.current!.style.left = left + "px";
+      underlineNav.current!.style.width = width + "px";
+    }
+  };
+
+  useEffect(() => {
+    animateUnderlineNav();
+  }, [activeSection]);
+
   useEffect(() => {
     var navbar = navbarRef.current;
-    if (window.pageYOffset > 300) navbar?.setAttribute("data-state", "scroll");
-    else navbar?.setAttribute("data-state", "");
+    // if (window.pageYOffset > navbarOffset)
+    //   navbar?.setAttribute("data-state", "scroll");
+    // else navbar?.setAttribute("data-state", "");
 
     window.addEventListener("scroll", () => {
-      if (window.pageYOffset > 300)
+      if (window.pageYOffset >= navbarOffset)
         navbar?.setAttribute("data-state", "scroll");
       else navbar?.setAttribute("data-state", "");
     });
-  }, [navbarRef]);
+  }, []);
 
   const renderThemeChanger = () => {
     if (!mounted) return null;
@@ -80,67 +157,44 @@ const Header: FC = () => {
             </button>
           </div>
         </div>
-        <NavLinks $isOpen={isOpen}>
-          <div className="flex flex-col px-2-mx-4 mt-2 md:flex-row md:mx-10 md:py-0">
-            <NavLink href="#hero">Home</NavLink>
-            <NavLink data-state="ok" href="#about">
-              About
-            </NavLink>
-            <NavLink href="#portfolio">Portfolio</NavLink>
-            <NavLink href="#skills">Skills</NavLink>
-            <NavLink href="#contact">Contact</NavLink>
+        <TwLinks $isOpen={isOpen}>
+          <div className="">
+            <ul className="flex flex-col px-2-mx-4 md:flex-row md:mx-10 md:py-0">
+              <li className="py-2">
+                <TwLink ref={navRefs[0]} href="#hero">
+                  Home
+                </TwLink>
+              </li>
+              <li className="py-2">
+                <TwLink ref={navRefs[1]} href="#about">
+                  About
+                </TwLink>
+              </li>
+              <li className="py-2">
+                <TwLink ref={navRefs[2]} href="#portfolio">
+                  Portfolio
+                </TwLink>
+              </li>
+              <li className="py-2">
+                <TwLink ref={navRefs[3]} href="#skills">
+                  Skills
+                </TwLink>
+              </li>
+              <li className="py-2">
+                <TwLink ref={navRefs[4]} href="#contact">
+                  Contact
+                </TwLink>
+              </li>
+            </ul>
+            <span
+              ref={underlineNav}
+              className=" absolute bottom-1 w-0 h-1 bg-indigo-700 block  transition-all duration-500 ease-in-out"
+            />
           </div>
           {renderThemeChanger()}
-        </NavLinks>
+        </TwLinks>
       </div>
     </nav>
   );
 };
 export default Header;
-
-interface LinksProps {
-  $isOpen: boolean;
-}
-const NavLink = tw.a`
-data-[state=ok]:text-red-600 
-hover:text-blue-500 
-px-2.5 
-pt-2 
-pb-4 
-text-gray-700 
-transition-all 
-duration-300 
-transform  
-dark:text-gray-200 
-border-b-4 
-border-white
-dark:border-gray-800 
-active:border-indigo-500 
-active:border-indigo-700 
-dark:active:border-gray-100 
-md:mx-2`;
-
-const NavLinks = tw.div<LinksProps>`
-  ${(p) =>
-    p.$isOpen ? "translate-x-0 opacity-100 " : "opacity-0 -translate-x-full"}
-  absolute 
-  inset-x-0 
-  z-20 
-  w-full
-  px-6 
-  py-4 
-  transition-all 
-  duration-300 
-  ease-in-out 
-  bg-white 
-  dark:bg-gray-800 
-  md:mt-0 
-  md:p-0 
-  md:top-0 
-  md:relative 
-  md:opacity-100 
-  md:translate-x-0 
-  md:flex 
-  md:items-center 
-  md:justify-between
-  `;
