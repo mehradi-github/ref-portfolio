@@ -203,7 +203,7 @@ md:mx-2`;
             </ul>
             <span
               ref={underlineNav}
-              className=" absolute bottom-1 h-1 bg-indigo-700 block  transition-all duration-500 ease-in-out"
+              className=" transition-all duration-500 ease-in-out absolute bottom-1 h-1 bg-indigo-700   hidden  md:block "
             />
           </div>
           {renderThemeChanger()}
