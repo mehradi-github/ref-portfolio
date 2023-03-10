@@ -1,3 +1,4 @@
+import nearestIndex from "@/utilits/nearestIndex";
 import { useTheme } from "next-themes";
 import React, { FC, useEffect, useState, useRef } from "react";
 import {
@@ -8,7 +9,7 @@ import {
   IoMoon,
 } from "react-icons/io5";
 import tw from "tailwind-styled-components";
-import useScrollSpy from "react-use-scrollspy";
+//import useScrollSpy from "react-use-scrollspy";
 
 interface P {
   refs: React.RefObject<HTMLElement>[];
@@ -20,10 +21,10 @@ const Header: FC<P> = ({ refs }) => {
   const [mounted, setMounted] = useState(false);
   const underlineNav = useRef<HTMLSpanElement>(null);
   // const navbarOffset = 150;
-  const activeSection = useScrollSpy({
-    sectionElementRefs: refs,
-    offsetPx: -240,
-  });
+  // const activeIndex = useScrollSpy({
+  //   sectionElementRefs: refs,
+  //   offsetPx: -240,
+  // });
 
   const navRefs: React.RefObject<HTMLAnchorElement>[] = [
     useRef<HTMLAnchorElement>(null),
@@ -76,29 +77,38 @@ md:mx-2`;
   md:justify-between
   `;
 
+  const [activeIndex, setActiveIndex] = useState<number>(0);
+  const handleScroll = (e: Event) => {
+    var index = nearestIndex(window.scrollY, refs, 0, refs.length - 1);
+    setActiveIndex(index);
+  };
+
   useEffect(() => {
     setMounted(true);
+    document.addEventListener("scroll", handleScroll);
+    return () => {
+      document.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   const animateUnderlineNav = () => {
-    if (activeSection) {
-      console.log(activeSection);
+    navbarRef.current!.setAttribute(
+      "data-state",
+      activeIndex > 0 ? "scroll" : ""
+    );
 
-      var navbar = navbarRef.current;
-      if (activeSection > 0) navbar?.setAttribute("data-state", "scroll");
-      else navbar?.setAttribute("data-state", "");
+    const e = navRefs[activeIndex];
+    var left = e.current?.offsetLeft;
+    var width = e.current?.offsetWidth;
+    underlineNav.current!.style.left = left + "px";
+    underlineNav.current!.style.width = width + "px";
 
-      const e = navRefs[activeSection];
-      var left = e.current?.offsetLeft;
-      var width = e.current?.offsetWidth;
-      underlineNav.current!.style.left = left + "px";
-      underlineNav.current!.style.width = width + "px";
-    }
+    console.log("activeIndex:", activeIndex, "left:", left, "width:", width);
   };
 
   useEffect(() => {
     animateUnderlineNav();
-  }, [activeSection]);
+  });
 
   // useEffect(() => {
   //   var navbar = navbarRef.current;
@@ -193,7 +203,7 @@ md:mx-2`;
             </ul>
             <span
               ref={underlineNav}
-              className=" absolute bottom-1 w-0 h-1 bg-indigo-700 block  transition-all duration-500 ease-in-out"
+              className=" absolute bottom-1 h-1 bg-indigo-700 block  transition-all duration-500 ease-in-out"
             />
           </div>
           {renderThemeChanger()}
