@@ -52,30 +52,30 @@ active:border-indigo-700
 dark:active:border-gray-100 
 md:mx-2`;
 
-  const TwLinks = tw.div<LinksProps>`
-  ${(p) =>
-    p.$isOpen ? "translate-x-0 opacity-100 " : "opacity-0 -translate-x-full"}
-  absolute 
-  inset-x-0 
-  z-20 
-  w-full
-  px-6 
-  py-4 
-  transition-all 
-  duration-300 
-  ease-in-out 
-  bg-white 
-  dark:bg-gray-800 
-  md:mt-0 
-  md:p-0 
-  md:top-0 
-  md:relative 
-  md:opacity-100 
-  md:translate-x-0 
-  md:flex 
-  md:items-center 
-  md:justify-between
-  `;
+  // const TwLinks = tw.div<LinksProps>`
+  // ${(p) =>
+  //   p.$isOpen ? "translate-x-0 opacity-100 " : "opacity-0 -translate-x-full"}
+  // absolute
+  // inset-x-0
+  // z-20
+  // w-full
+  // px-6
+  // py-4
+  // transition-all
+  // duration-300
+  // ease-in-out
+  // bg-white
+  // dark:bg-gray-800
+  // md:mt-0
+  // md:p-0
+  // md:top-0
+  // md:relative
+  // md:opacity-100
+  // md:translate-x-0
+  // md:flex
+  // md:items-center
+  // md:justify-between
+  // `;
 
   const [activeIndex, setActiveIndex] = useState<number>(0);
   const handleScroll = (e: Event) => {
@@ -172,30 +172,55 @@ md:mx-2`;
             </button>
           </div>
         </div>
-        <TwLinks $isOpen={isOpen}>
+        <div
+          className={` 
+        ${
+          isOpen ? "translate-x-0 opacity-100 " : "opacity-0 -translate-x-full "
+        }
+        absolute 
+  inset-x-0 
+  z-20 
+  w-full
+  px-6 
+  py-4 
+  transition-all 
+  duration-300 
+  ease-in-out 
+  bg-white 
+  dark:bg-gray-800 
+  md:mt-0 
+  md:p-0 
+  md:top-0 
+  md:relative 
+  md:opacity-100 
+  md:translate-x-0 
+  md:flex 
+  md:items-center 
+  md:justify-between`}
+        >
           <div className="">
             <ul className="flex flex-col px-2-mx-4 md:flex-row md:mx-10 md:py-0">
-              <li className="py-2">
+              <li className="py-2 mr-10">
                 <TwLink ref={navRefs[0]} href="#hero">
                   Home
                 </TwLink>
               </li>
-              <li className="py-2">
+              <li className="py-2 mr-10">
                 <TwLink ref={navRefs[1]} href="#about">
                   About
                 </TwLink>
               </li>
-              <li className="py-2">
+              <li className="py-2 mr-10">
                 <TwLink ref={navRefs[2]} href="#portfolio">
                   Portfolio
                 </TwLink>
               </li>
-              <li className="py-2">
+              <li className="py-2 mr-10">
                 <TwLink ref={navRefs[3]} href="#skills">
                   Skills
                 </TwLink>
               </li>
-              <li className="py-2">
+              <li className="py-2 mr-10">
                 <TwLink ref={navRefs[4]} href="#contact">
                   Contact
                 </TwLink>
@@ -207,7 +232,7 @@ md:mx-2`;
             />
           </div>
           {renderThemeChanger()}
-        </TwLinks>
+        </div>
       </div>
     </nav>
   );
