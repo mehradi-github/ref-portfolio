@@ -20,6 +20,12 @@ module.exports = {
       transitionDuration: {
         10: "10ms",
       },
+      transitionProperty: {
+        width: "width",
+        height: "height",
+        margin: "margin",
+        opacity: "opacity",
+      },
     },
   },
   plugins: [
