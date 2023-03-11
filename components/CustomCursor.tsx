@@ -9,7 +9,7 @@ const CustomCursor: FC = () => {
 
   return (
     <Fragment>
-      <div className="fixed left-0 top-0 pointer-events-none radius-[50%] translate-x-2 cur-outer" />
+      <div className="fixed left-0 top-0 pointer-events-none radius-[50%] translate-z-0 hidden " />
       <div className="cur cur-inner" />
     </Fragment>
   );
