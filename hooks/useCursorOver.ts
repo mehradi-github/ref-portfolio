@@ -1,20 +1,25 @@
 import { ProfileContext } from "@/context/context";
 import { useState, useEffect, RefObject, useContext } from "react";
 
-const useCursorOver = (refs: RefObject<HTMLDivElement>[]) => {
+const useCursorOver = (refs: RefObject<HTMLElement>[]) => {
   const [ctx, setCtx] = useContext(ProfileContext);
   useEffect(() => {
-    const handleCursorOver = (e: MouseEvent) => {
-      setCtx({ ...ctx, cursorActive: !ctx.cursorActive });
+    const handleCursorEnter = (e: MouseEvent) => {
+      setCtx({ ...ctx, cursorActive: true });
+      console.log("enter");
+    };
+    const handleCursorLeave = (e: MouseEvent) => {
+      setCtx({ ...ctx, cursorActive: false });
+      console.log("leave");
     };
     refs.map((ref) => {
-      ref.current!.addEventListener("mouseenter", handleCursorOver);
-      ref.current!.addEventListener("mouseleave", handleCursorOver);
+      ref.current!.addEventListener("mouseenter", handleCursorEnter);
+      ref.current!.addEventListener("mouseleave", handleCursorLeave);
     });
     return () => {
       refs.map((ref) => {
-        ref.current!.removeEventListener("mouseenter", handleCursorOver);
-        ref.current!.removeEventListener("mouseleave", handleCursorOver);
+        ref.current!.removeEventListener("mouseenter", handleCursorEnter);
+        ref.current!.removeEventListener("mouseleave", handleCursorLeave);
       });
     };
   }, []);

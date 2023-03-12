@@ -1,4 +1,5 @@
 import { ProfileContext } from "@/context/context";
+import useCursorOver from "@/hooks/useCursorOver";
 import nearestIndex from "@/utilits/nearestIndex";
 import { useTheme } from "next-themes";
 import React, { FC, useEffect, useState, useRef, useContext } from "react";
@@ -22,6 +23,7 @@ const Header: FC<P> = ({ refs }) => {
   const { systemTheme, theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const underlineNav = useRef<HTMLSpanElement>(null);
+
   // const navbarOffset = 150;
   // const activeIndex = useScrollSpy({
   //   sectionElementRefs: refs,
@@ -35,24 +37,24 @@ const Header: FC<P> = ({ refs }) => {
     useRef<HTMLAnchorElement>(null),
     useRef<HTMLAnchorElement>(null),
   ];
-
+  useCursorOver(navRefs);
   interface LinksProps {
     $isOpen: boolean;
   }
-  const TwLink = tw.a`
-hover:text-blue-500 
-px-2.5 
-pb-2 
-text-gray-700 
-transition-all 
-duration-300 
-transform  
-dark:text-gray-200 
+  //   const TwLink = tw.a`
+  // hover:text-blue-500
+  // px-2.5
+  // pb-2
+  // text-gray-700
+  // transition-all
+  // duration-300
+  // transform
+  // dark:text-gray-200
 
-active:border-indigo-500 
-active:border-indigo-700 
-dark:active:border-gray-100 
-md:mx-2`;
+  // active:border-indigo-500
+  // active:border-indigo-700
+  // dark:active:border-gray-100
+  // md:mx-2`;
 
   // const TwLinks = tw.div<LinksProps>`
   // ${(p) =>
@@ -203,7 +205,25 @@ md:mx-2`;
         >
           <div className="">
             <ul className="flex flex-col px-2-mx-4 md:flex-row md:mx-10 md:py-0">
-              <li className="py-2 mr-10">
+              {[
+                { name: "Home", href: "#hero" },
+                { name: "About", href: "#about" },
+                { name: "Portfolio", href: "#portfolio" },
+                { name: "Skills", href: "#skills" },
+                { name: "Contact", href: "#contact" },
+              ].map((v, i) => (
+                <li key={i} className="py-2 mr-10">
+                  <a
+                    ref={navRefs[i]}
+                    href={v.href}
+                    className="hover:text-blue-500 px-2.5 pb-2 text-gray-700 transition-all duration-300 transform  dark:text-gray-200 active:border-indigo-500 active:border-indigo-700 dark:active:border-gray-100 md:mx-2"
+                  >
+                    {v.name}
+                  </a>
+                </li>
+              ))}
+
+              {/* <li className="py-2 mr-10">
                 <TwLink ref={navRefs[0]} href="#hero">
                   Home
                 </TwLink>
@@ -227,7 +247,7 @@ md:mx-2`;
                 <TwLink ref={navRefs[4]} href="#contact">
                   Contact
                 </TwLink>
-              </li>
+              </li> */}
             </ul>
             <span
               ref={underlineNav}
@@ -237,11 +257,6 @@ md:mx-2`;
           {renderThemeChanger()}
         </div>
       </div>
-      {/* <button
-        onClick={() => setCtx({ ...ctx, cursorActive: !ctx.cursorActive })}
-      >
-        GGG
-      </button> */}
     </nav>
   );
 };
