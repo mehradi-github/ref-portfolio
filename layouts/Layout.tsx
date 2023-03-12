@@ -1,4 +1,4 @@
-import React, { FC, useRef } from "react";
+import React, { FC, RefObject, useEffect, useRef } from "react";
 import Head from "next/head";
 import { Fragment } from "react";
 import Header from "@/components/Header";
@@ -11,14 +11,23 @@ import DarkMode from "@/utilits/darkMode";
 import ScrollToTop from "@/components/scrollToTop";
 import Skills from "@/components/Skills";
 import Footer from "@/components/Footer";
+import CustomCursor from "@/components/CustomCursor";
+
+export interface CursorEffect {
+  cursorOver(ref: RefObject<HTMLElement>): void;
+}
 const Layout: FC = () => {
-  const sectionRefs: React.RefObject<HTMLElement>[] = [
+  const sectionRefs: RefObject<HTMLElement>[] = [
     useRef<HTMLElement>(null),
     useRef<HTMLElement>(null),
     useRef<HTMLElement>(null),
     useRef<HTMLElement>(null),
     useRef<HTMLElement>(null),
   ];
+  // const refCursors: RefObject<HTMLDivElement>[] = [
+  //   useRef<HTMLDivElement>(null),
+  //   useRef<HTMLDivElement>(null),
+  // ];
 
   return (
     <Fragment>
@@ -28,7 +37,7 @@ const Layout: FC = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header refs={sectionRefs} />
+      <Header refs={sectionRefs} cursorOver={cursorOver} />
       <Hero sctionRef={sectionRefs[0]} />
       <About sctionRef={sectionRefs[1]} />
       <Portfolio sctionRef={sectionRefs[2]} />
@@ -36,6 +45,7 @@ const Layout: FC = () => {
       <Contact sctionRef={sectionRefs[4]} />
       <Footer />
       <ScrollToTop />
+      <CustomCursor />
     </Fragment>
   );
 };
