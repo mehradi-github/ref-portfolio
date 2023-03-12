@@ -10,10 +10,11 @@ import React, {
 
 const CustomCursor: FC = () => {
   // const [cursorActive, setcursorActive] = useState(false);
-  // const [cursorCoordinate, setCursorCoordinate] = useState({ x: 0, y: 0 });
-  const [ctx, setCtx] = useContext(ProfileContext);
+  //const [cursorCoordinate, setCursorCoordinate] = useState({ x: 0, y: 0 });
+  const [ctx] = useContext(ProfileContext);
   const refCursorInner = useRef<HTMLDivElement>(null);
   const refCursorOuter = useRef<HTMLDivElement>(null);
+
   const CursorEffect = () => {
     if (document.body) {
       window.onmousemove = (e) => {
@@ -47,7 +48,7 @@ const CustomCursor: FC = () => {
       <div
         data-state={ctx.cursorActive ? "active" : ""}
         ref={refCursorOuter}
-        className="hidden md:block fixed left-0 top-0 pointer-events-none rounded-full translate-z-2  border-indigo-500 border-solid  border-2 box-border -ml-4 -mt-4 w-8 h-8 z-50 opacity-50 transition-all duration-75 ease-out data-[state=active]:opacity-0"
+        className="hidden md:block fixed left-0 top-0 pointer-events-none rounded-full translate-z-2 border-indigo-500 border-solid  border-2 box-border -ml-4 -mt-4 w-8 h-8 z-50 opacity-50 transition-all duration-75 ease-out data-[state=active]:opacity-0"
       />
       <div
         data-state={ctx.cursorActive ? "active" : ""}
