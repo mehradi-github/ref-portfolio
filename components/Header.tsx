@@ -10,7 +10,7 @@ import {
   IoSunny,
   IoMoon,
 } from "react-icons/io5";
-import tw from "tailwind-styled-components";
+// import tw from "tailwind-styled-components";
 //import useScrollSpy from "react-use-scrollspy";
 
 interface P {
@@ -23,6 +23,7 @@ const Header: FC<P> = ({ refs }) => {
   const { systemTheme, theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const underlineNav = useRef<HTMLSpanElement>(null);
+  const refThemeChanger = useRef<HTMLDivElement>(null);
 
   // const navbarOffset = 150;
   // const activeIndex = useScrollSpy({
@@ -37,7 +38,7 @@ const Header: FC<P> = ({ refs }) => {
     useRef<HTMLAnchorElement>(null),
     useRef<HTMLAnchorElement>(null),
   ];
-  useCursorOver(navRefs);
+  useCursorOver([...navRefs, refThemeChanger]);
   interface LinksProps {
     $isOpen: boolean;
   }
@@ -254,7 +255,7 @@ const Header: FC<P> = ({ refs }) => {
               className=" transition-all duration-500 ease-in-out absolute bottom-1 h-1 bg-indigo-700   hidden  md:block "
             />
           </div>
-          {renderThemeChanger()}
+          <div ref={refThemeChanger}> {renderThemeChanger()}</div>
         </div>
       </div>
     </nav>
