@@ -1,9 +1,17 @@
-import React, { FC, Fragment, useEffect, useRef, useState } from "react";
+import { ProfileContext } from "@/context/context";
+import React, {
+  FC,
+  Fragment,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 
 const CustomCursor: FC = () => {
-  const [isActive, setIsActive] = useState(false);
-  const [coordinate, setCoordinate] = useState([0, 0]);
-
+  // const [cursorActive, setcursorActive] = useState(false);
+  // const [cursorCoordinate, setCursorCoordinate] = useState({ x: 0, y: 0 });
+  const [ctx, setCtx] = useContext(ProfileContext);
   const refCursorInner = useRef<HTMLDivElement>(null);
   const refCursorOuter = useRef<HTMLDivElement>(null);
   const CursorEffect = () => {
@@ -37,12 +45,12 @@ const CustomCursor: FC = () => {
   return (
     <Fragment>
       <div
-        data-state={isActive ? "active" : ""}
+        data-state={ctx.cursorActive ? "active" : ""}
         ref={refCursorOuter}
         className="hidden md:block fixed left-0 top-0 pointer-events-none rounded-full translate-z-2  border-indigo-500 border-solid  border-2 box-border -ml-4 -mt-4 w-8 h-8 z-50 opacity-50 transition-all duration-75 ease-out data-[state=active]:opacity-0"
       />
       <div
-        data-state={isActive ? "active" : ""}
+        data-state={ctx.cursorActive ? "active" : ""}
         ref={refCursorInner}
         className="hidden md:block fixed left-0 top-0 pointer-events-none rounded-full translate-z-2  bg-indigo-500 -ml-1 -mt-1 w-2 h-2  z-50  transition-all duration-75  ease-in-out data-[state=active]:duration-300 data-[state=active]:-ml-10 data-[state=active]:-mt-10 data-[state=active]:w-20 data-[state=active]:h-20 data-[state=active]:opacity-30"
       />

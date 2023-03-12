@@ -1,6 +1,7 @@
+import { ProfileContext } from "@/context/context";
 import nearestIndex from "@/utilits/nearestIndex";
 import { useTheme } from "next-themes";
-import React, { FC, useEffect, useState, useRef } from "react";
+import React, { FC, useEffect, useState, useRef, useContext } from "react";
 import {
   IoInformationCircle,
   IoMenu,
@@ -15,6 +16,7 @@ interface P {
   refs: React.RefObject<HTMLElement>[];
 }
 const Header: FC<P> = ({ refs }) => {
+  const [ctx, setCtx] = useContext(ProfileContext);
   const navbarRef = useRef<HTMLElement>(null);
   const [isOpen, setisOpen] = useState(false);
   const { systemTheme, theme, setTheme } = useTheme();
@@ -235,6 +237,11 @@ md:mx-2`;
           {renderThemeChanger()}
         </div>
       </div>
+      {/* <button
+        onClick={() => setCtx({ ...ctx, cursorActive: !ctx.cursorActive })}
+      >
+        GGG
+      </button> */}
     </nav>
   );
 };
