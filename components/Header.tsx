@@ -1,4 +1,3 @@
-import { CursorEffect } from "@/layouts/Layout";
 import nearestIndex from "@/utilits/nearestIndex";
 import { useTheme } from "next-themes";
 import React, { FC, useEffect, useState, useRef } from "react";
@@ -12,10 +11,10 @@ import {
 import tw from "tailwind-styled-components";
 //import useScrollSpy from "react-use-scrollspy";
 
-interface P extends CursorEffect {
+interface P {
   refs: React.RefObject<HTMLElement>[];
 }
-const Header: FC<P> = ({ refs, cursorOver }) => {
+const Header: FC<P> = ({ refs }) => {
   const navbarRef = useRef<HTMLElement>(null);
   const [isOpen, setisOpen] = useState(false);
   const { systemTheme, theme, setTheme } = useTheme();

@@ -13,9 +13,9 @@ import Skills from "@/components/Skills";
 import Footer from "@/components/Footer";
 import CustomCursor from "@/components/CustomCursor";
 
-export interface CursorEffect {
-  cursorOver(ref: RefObject<HTMLElement>): void;
-}
+// export interface CursorEffect {
+//   cursorOver(ref: RefObject<HTMLElement>): void;
+// }
 const Layout: FC = () => {
   const sectionRefs: RefObject<HTMLElement>[] = [
     useRef<HTMLElement>(null),
@@ -37,7 +37,7 @@ const Layout: FC = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header refs={sectionRefs} cursorOver={cursorOver} />
+      <Header refs={sectionRefs} />
       <Hero sctionRef={sectionRefs[0]} />
       <About sctionRef={sectionRefs[1]} />
       <Portfolio sctionRef={sectionRefs[2]} />
