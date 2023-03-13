@@ -155,7 +155,7 @@ const Header: FC<P> = ({ refs }) => {
   return (
     <nav
       ref={navbarRef}
-      className="relative bg-white shadow dark:bg-gray-800 data-[state=scroll]:nav-scroll"
+      className="z-50 relative bg-white shadow dark:bg-gray-800 data-[state=scroll]:nav-scroll"
     >
       <div className="container px-6 py-3 mx-auto md:flex">
         <div className="flex items-center justify-between">

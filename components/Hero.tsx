@@ -9,6 +9,7 @@ interface P {
 const Hero: FC<P> = ({ sctionRef }) => {
   return (
     <section ref={sctionRef} id="hero" className="min-h-screen">
+      <HeroParticle />
       <div>
         loremVeniam do labore id in proident tempor duis non. Occaecat commodo
         dolor tempor eiusmod dolore. Occaecat sit consectetur irure deserunt
@@ -32,7 +33,6 @@ const Hero: FC<P> = ({ sctionRef }) => {
         anim exercitation ipsum eiusmod. Labore nostrud ex qui officia id elit
         aute commodo elit proident duis velit eu.
       </div>
-      <HeroParticle />
     </section>
   );
 };
