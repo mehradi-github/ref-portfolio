@@ -9,7 +9,7 @@ import {
   IoLogoTwitter,
   IoLogoInstagram,
 } from "react-icons/io5";
-
+import Image from "next/image";
 interface P {
   sctionRef: React.LegacyRef<HTMLElement> | undefined;
 }
@@ -69,6 +69,15 @@ const Hero: FC<P> = ({ sctionRef }) => {
           </a>
         </div>
       </div>
+      <span className="absolute top-[150px] left-[100px] animate-updown">
+        <Image
+          width={75}
+          height={75}
+          src="./assets/images/w3_css-official.svg"
+          alt="css3"
+        />
+      </span>
+
       <HeroParticle />
     </section>
   );

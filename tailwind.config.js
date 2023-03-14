@@ -14,6 +14,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        updown: {
+          "0%, 100%": { transform: "translateY(-10px)" },
+          "50%": { transform: "translateY(10px)" },
+        },
+      },
+      animation: {
+        updown: "updown 4s cubic-bezier(0.54, 0.085, 0.5, 0.92) infinite",
+      },
       // fontFamily: {
       //   poppins: ["Poppins"],
       // },
