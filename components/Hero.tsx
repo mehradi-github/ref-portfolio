@@ -69,14 +69,117 @@ const Hero: FC<P> = ({ sctionRef }) => {
           </a>
         </div>
       </div>
-      <span className="absolute top-[150px] left-[100px] animate-updown">
+      <div className="">
+        <Image
+          width={75}
+          height={75}
+          src="./assets/images/reactjs-icon.svg"
+          alt="css3"
+          className="absolute top-[100px] left-[430px] animate-updown"
+        />
+        <Image
+          width={75}
+          height={75}
+          src="./assets/images/redux.svg"
+          alt="css3"
+          className="absolute top-[200px] left-[300px] animate-updown"
+        />
+        <Image
+          width={65}
+          height={65}
+          src="./assets/images/typescriptlang-icon.svg"
+          alt="css3"
+          className="absolute top-[130px] left-[140px] animate-updown"
+        />
+        <Image
+          width={75}
+          height={75}
+          src="./assets/images/tailwindcss.svg"
+          alt="css3"
+          className="absolute top-[300px] left-[80px] animate-updown"
+        />
+
+        <Image
+          width={75}
+          height={75}
+          src="./assets/images/sass-1.svg"
+          alt="css3"
+          className="absolute top-[200px] left-[800px] animate-updown"
+        />
+        <Image
+          width={75}
+          height={75}
+          src="./assets/images/w3_html5-icon.svg"
+          alt="css3"
+          className="absolute top-[250px] left-[1000px] animate-updown"
+        />
         <Image
           width={75}
           height={75}
           src="./assets/images/w3_css-official.svg"
           alt="css3"
+          className="absolute top-[120px] left-[930px] animate-updown"
         />
-      </span>
+        <Image
+          width={100}
+          height={100}
+          src="./assets/images/nodejs-1.svg"
+          alt="css3"
+          className="absolute top-[400px] left-[950px] animate-updown"
+        />
+        <Image
+          width={50}
+          height={50}
+          src="./assets/images/logo-javascript.svg"
+          alt="css3"
+          className="absolute top-[500px] left-[850px] animate-updown"
+        />
+
+        <Image
+          width={60}
+          height={60}
+          src="./assets/images/graphql-logo-2.svg"
+          alt="css3"
+          className="absolute top-[450px] left-[300px]  animate-updown"
+        />
+        <Image
+          width={150}
+          height={150}
+          src="./assets/images/jest-2.svg"
+          alt="css3"
+          className="absolute top-[450px] left-[1000px] animate-updown"
+        />
+
+        <Image
+          width={65}
+          height={65}
+          src="./assets/images/kubernetes-icon.svg"
+          alt="css3"
+          className="absolute top-[400px] left-[160px] animate-updown"
+        />
+
+        <Image
+          width={80}
+          height={80}
+          src="./assets/images/docker-icon.svg"
+          alt="css3"
+          className="absolute  top-[570px] left-[200px]  animate-updown"
+        />
+        <Image
+          width={75}
+          height={75}
+          src="./assets/images/aws-2.svg"
+          alt="css3"
+          className="absolute top-[570px] left-[950px] animate-updown"
+        />
+        <Image
+          width={60}
+          height={60}
+          src="./assets/images/scrum-1.svg"
+          alt="css3"
+          className="absolute  top-[500px] left-[75px] animate-updown"
+        />
+      </div>
 
       <HeroParticle />
     </section>
