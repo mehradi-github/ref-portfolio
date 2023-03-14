@@ -1,6 +1,4 @@
-import React, { FC } from "react";
-import Particles from "react-tsparticles";
-import { loadFull } from "tsparticles";
+import React, { FC, useRef } from "react";
 import HeroParticle from "./HeroParticle";
 import {
   IoLogoLinkedin,
@@ -10,10 +8,22 @@ import {
   IoLogoInstagram,
 } from "react-icons/io5";
 import Image from "next/image";
+import useCursorOver from "@/hooks/useCursorOver";
+
 interface P {
   sctionRef: React.LegacyRef<HTMLElement> | undefined;
 }
 const Hero: FC<P> = ({ sctionRef }) => {
+  const fllowRefs: React.RefObject<HTMLAnchorElement>[] = [
+    useRef<HTMLAnchorElement>(null),
+    useRef<HTMLAnchorElement>(null),
+    useRef<HTMLAnchorElement>(null),
+    useRef<HTMLAnchorElement>(null),
+    useRef<HTMLAnchorElement>(null),
+  ];
+
+  useCursorOver(fllowRefs);
+
   return (
     <section ref={sctionRef} id="hero" className="min-h-screen">
       <div className="container mx-auto flex flex-col items-center justify-center lg:mt-10 only-md:mt-10 sm:pt-24 sm:pb-16">
@@ -26,12 +36,13 @@ const Hero: FC<P> = ({ sctionRef }) => {
         <h2 className="text-xl font-semibold">
           Software Engineer and Senior Frontend Developer
         </h2>
-        <div className="w-auto flex flex-row items-center justify-center mt-24">
+        <div className="w-auto flex flex-row items-center justify-center mt-24 z-50">
           <a
             target="_blank"
             rel="noopener noreferrer"
             href="#"
             aria-label="Github"
+            ref={fllowRefs[0]}
           >
             <IoLogoGithub className="text-4xl text-gray-800 mr-4" />
           </a>
@@ -40,6 +51,7 @@ const Hero: FC<P> = ({ sctionRef }) => {
             rel="noopener noreferrer"
             href="#"
             aria-label="Youtube"
+            ref={fllowRefs[1]}
           >
             <IoLogoYoutube className="text-4xl text-gray-800 mr-4" />
           </a>
@@ -48,6 +60,7 @@ const Hero: FC<P> = ({ sctionRef }) => {
             rel="noopener noreferrer"
             href="#"
             aria-label="Instagram"
+            ref={fllowRefs[2]}
           >
             <IoLogoInstagram className="text-4xl text-gray-800 mr-4" />
           </a>
@@ -56,6 +69,7 @@ const Hero: FC<P> = ({ sctionRef }) => {
             rel="noopener noreferrer"
             href="#"
             aria-label="Linkedin"
+            ref={fllowRefs[3]}
           >
             <IoLogoLinkedin className="text-4xl text-gray-800 mr-4" />
           </a>
@@ -64,6 +78,7 @@ const Hero: FC<P> = ({ sctionRef }) => {
             rel="noopener noreferrer"
             href="#"
             aria-label="Twitter"
+            ref={fllowRefs[4]}
           >
             <IoLogoTwitter className="text-4xl text-gray-800 mr-4" />
           </a>

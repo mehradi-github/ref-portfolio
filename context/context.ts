@@ -2,7 +2,7 @@ import { createContext, Dispatch, SetStateAction } from "react";
 
 export type ctx = {
   cursorActive: boolean;
-  cursorCoordinate: { x: number; y: number };
+  // cursorCoordinate: { x: number; y: number };
 };
 
 export const ProfileContext =
