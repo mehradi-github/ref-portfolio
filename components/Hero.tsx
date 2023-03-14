@@ -26,7 +26,7 @@ const Hero: FC<P> = ({ sctionRef }) => {
 
   return (
     <section ref={sctionRef} id="hero" className="min-h-screen">
-      <div className="container mx-auto flex flex-col items-center justify-center lg:mt-10 only-md:mt-10 sm:pt-24 sm:pb-16">
+      <div className="container only-md:pt-2  mx-auto flex flex-col items-center justify-center lg:mt-10 only-md:mt-10 sm:pt-24 sm:pb-16">
         <p className="block text-base font-bold mt-4 lg:mt-0">
           Hello, My name is
         </p>
