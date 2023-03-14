@@ -44,7 +44,7 @@ const Hero: FC<P> = ({ sctionRef }) => {
             aria-label="Github"
             ref={fllowRefs[0]}
           >
-            <IoLogoGithub className="text-4xl text-gray-800 mr-4" />
+            <IoLogoGithub className="text-4xl text-gray-800 dark:text-gray-100 mr-4" />
           </a>
           <a
             target="_blank"
@@ -53,7 +53,7 @@ const Hero: FC<P> = ({ sctionRef }) => {
             aria-label="Youtube"
             ref={fllowRefs[1]}
           >
-            <IoLogoYoutube className="text-4xl text-gray-800 mr-4" />
+            <IoLogoYoutube className="text-4xl text-gray-800 dark:text-gray-100 mr-4" />
           </a>
           <a
             target="_blank"
@@ -62,7 +62,7 @@ const Hero: FC<P> = ({ sctionRef }) => {
             aria-label="Instagram"
             ref={fllowRefs[2]}
           >
-            <IoLogoInstagram className="text-4xl text-gray-800 mr-4" />
+            <IoLogoInstagram className="text-4xl text-gray-800 dark:text-gray-100 mr-4" />
           </a>
           <a
             target="_blank"
@@ -71,7 +71,7 @@ const Hero: FC<P> = ({ sctionRef }) => {
             aria-label="Linkedin"
             ref={fllowRefs[3]}
           >
-            <IoLogoLinkedin className="text-4xl text-gray-800 mr-4" />
+            <IoLogoLinkedin className="text-4xl text-gray-800 dark:text-gray-100 mr-4" />
           </a>
           <a
             target="_blank"
@@ -80,7 +80,7 @@ const Hero: FC<P> = ({ sctionRef }) => {
             aria-label="Twitter"
             ref={fllowRefs[4]}
           >
-            <IoLogoTwitter className="text-4xl text-gray-800 mr-4" />
+            <IoLogoTwitter className="text-4xl text-gray-800 dark:text-gray-100 mr-4" />
           </a>
         </div>
       </div>
