@@ -14,6 +14,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      // fontFamily: {
+      //   poppins: ["Poppins"],
+      // },
       screens: {
         "only-sm": { min: "640px", max: "767px" },
         // => @media (min-width: 640px and max-width: 767px) { ... }
@@ -29,9 +32,6 @@ module.exports = {
 
         "only-2xl": { min: "1536px" },
         // => @media (min-width: 1536px) { ... }
-      },
-      fontFamily: {
-        poppins: ["Poppins", "sans-serif"],
       },
       strokeWidth: {
         4: "4",

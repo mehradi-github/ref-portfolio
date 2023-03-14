@@ -11,10 +11,14 @@ const Hero: FC<P> = ({ sctionRef }) => {
     <section ref={sctionRef} id="hero" className="min-h-screen">
       <div className="container mx-auto flex sm:flex-col items-center justify-center lg:mt-10 only-md:mt-10 sm:pt-24 sm:pb-16">
         <p className="block text-base font-bold">Hello, My name is</p>
-        <h1 className="block text-8xl font-bold font-poppins">Sadiq Mehradi</h1>
-        <h2>Software Engineer and Senior Frontend Developer</h2>
+        <h1 className="block text-8xl font-bold leading-loose ">
+          Sadiq <span className="text-indigo-600">Mehradi</span>
+        </h1>
+        <h2 className="text-xl font-semibold">
+          Software Engineer and Senior Frontend Developer
+        </h2>
       </div>
-      {/* <HeroParticle /> */}
+      <HeroParticle />
     </section>
   );
 };

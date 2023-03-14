@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap"); */
 
 /* @layer components {
   .card{
@@ -9,6 +10,7 @@
 
   }
 } */
+
 @layer components {
   .nav-scroll {
     @apply p-0 w-full fixed -top-20 transition-transform duration-500 translate-y-20;
