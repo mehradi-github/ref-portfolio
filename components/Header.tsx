@@ -213,7 +213,7 @@ const Header: FC<P> = ({ refs }) => {
                 { name: "Skills", href: "#skills" },
                 { name: "Contact", href: "#contact" },
               ].map((v, i) => (
-                <li key={i} className="py-2 mr-10">
+                <li key={i} className="py-2 mr-3 lg:mr-10 ">
                   <a
                     ref={navRefs[i]}
                     href={v.href}
