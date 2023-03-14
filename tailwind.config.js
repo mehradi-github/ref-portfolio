@@ -30,6 +30,9 @@ module.exports = {
         "only-2xl": { min: "1536px" },
         // => @media (min-width: 1536px) { ... }
       },
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+      },
       strokeWidth: {
         4: "4",
       },
