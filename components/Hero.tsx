@@ -25,7 +25,11 @@ const Hero: FC<P> = ({ sctionRef }) => {
   useCursorOver(fllowRefs);
 
   return (
-    <section ref={sctionRef} id="hero" className="min-h-screen">
+    <section
+      ref={sctionRef}
+      id="hero"
+      className="min-h-screen flex align-middle"
+    >
       <div className="container mx-auto flex flex-col items-center justify-center lg:mt-10 sm:pt-10 sm:pb-16">
         <p className="block text-base font-bold mt-4 lg:mt-0 text-center">
           Hello, My name is

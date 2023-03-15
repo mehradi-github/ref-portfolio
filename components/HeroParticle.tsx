@@ -71,7 +71,7 @@ const HeroParticle: FC = () => {
   };
   return (
     <Particles
-      className="absolute w-full h-full top-20 left-0 "
+      className="absolute w-full h-screen top-0 left-0 "
       id="hero-particle"
       init={async (engine: Engine) => await loadFull(engine)}
       options={particlesOptions}
