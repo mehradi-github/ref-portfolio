@@ -27,13 +27,13 @@ const Hero: FC<P> = ({ sctionRef }) => {
   return (
     <section ref={sctionRef} id="hero" className="min-h-screen">
       <div className="container mx-auto flex flex-col items-center justify-center lg:mt-10 sm:pt-10 sm:pb-16">
-        <p className="block text-base font-bold mt-4 lg:mt-0">
+        <p className="block text-base font-bold mt-4 lg:mt-0 text-center">
           Hello, My name is
         </p>
-        <h1 className="block text-6xl md:text-8xl font-bold leading-loose my-4 md:my-16 ">
+        <h1 className="block text-6xl md:text-8xl font-bold leading-loose my-4 md:my-16 text-center ">
           Sadiq <span className="text-indigo-600">Mehradi</span>
         </h1>
-        <h2 className="text-xl font-semibold">
+        <h2 className="text-xl font-semibold text-center">
           Software Engineer and Senior Frontend Developer
         </h2>
         <div className="w-auto flex flex-row items-center justify-center mt-24 z-30">
