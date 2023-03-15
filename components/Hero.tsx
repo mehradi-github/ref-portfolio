@@ -36,7 +36,7 @@ const Hero: FC<P> = ({ sctionRef }) => {
         <h2 className="text-xl font-semibold">
           Software Engineer and Senior Frontend Developer
         </h2>
-        <div className="w-auto flex flex-row items-center justify-center mt-24 z-50">
+        <div className="w-auto flex flex-row items-center justify-center mt-24 z-30">
           <a
             target="_blank"
             rel="noopener noreferrer"
