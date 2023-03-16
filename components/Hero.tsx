@@ -88,34 +88,41 @@ const Hero: FC<P> = ({ sctionRef }) => {
           </a>
         </div>
       </div>
-      <div className="">
+      <div className="-z-10 opacity-10 sm:opacity-20 md:opacity-50 lg:opacity-100 ">
         <Image
           width={75}
           height={75}
           src="./assets/images/reactjs-icon.svg"
           alt="reactjs"
-          className="absolute hidden sm:block sm:top-[120px] sm:left-[450px]  md:top-[170px] md:left-[420px] lg:top-[80px] lg:left-[450px]   xl:top-[90px] xl:left-[470px]   animate-updown"
+          className="absolute  top-[15%] left-[33%]    animate-updown"
         />
         <Image
           width={75}
           height={75}
           src="./assets/images/redux.svg"
           alt="redux"
-          className="absolute hidden lg:block lg:top-[180px] lg:left-[300px] xl:top-[180px] xl:left-[330px] animate-updown"
+          className="absolute  top-[30%] left-[20%]  animate-updown"
         />
         <Image
           width={65}
           height={65}
           src="./assets/images/typescriptlang-icon.svg"
           alt="typescript"
-          className="absolute hidden sm:block sm:top-[120px] sm:left-[140px] md:top-[100px] md:left-[180px] lg:top-[130px] lg:left-[140px] xl:top-[100px] xl:left-[150px] animate-updown"
+          className="absolute  top-[15%] left-[5%]  animate-updown"
         />
         <Image
           width={75}
           height={75}
           src="./assets/images/tailwindcss.svg"
           alt="tailwindcss"
-          className="absolute hidden xl:block xl:top-[250px] xl:left-[80px]  animate-updown"
+          className="absolute  top-[45%] left-[5%]   animate-updown"
+        />
+        <Image
+          width={75}
+          height={75}
+          src="./assets/images/mongodb-icon-1.svg"
+          alt="mongodb"
+          className="absolute  top-[60%] left-[15%]   animate-updown"
         />
 
         <Image
@@ -123,35 +130,35 @@ const Hero: FC<P> = ({ sctionRef }) => {
           height={75}
           src="./assets/images/sass-1.svg"
           alt="sass"
-          className="absolute hidden sm:block sm:top-[360px] sm:left-[310px]  md:top-[420px] md:left-[600px]  lg:top-[200px] lg:left-[700px] xl:top-[200px] xl:left-[800px] animate-updown"
+          className="absolute top-[16%] right-[33%]  animate-updown"
         />
         <Image
           width={75}
           height={75}
           src="./assets/images/w3_html5-icon.svg"
           alt="html5"
-          className="absolute hidden md:block md:top-[120px] md:left-[630px] lg:top-[170px] lg:left-[900px] xl:top-[200px] xl:left-[1100px]  animate-updown"
+          className="absolute top-[30%] right-[20%]  animate-updown"
         />
         <Image
           width={75}
           height={75}
           src="./assets/images/w3_css-official.svg"
           alt="css3"
-          className="absolute hidden lg:block lg:top-[90px] lg:left-[770px] xl:top-[90px] xl:left-[930px] animate-updown"
+          className="absolute top-[15%] right-[4%]  animate-updown"
         />
         <Image
           width={100}
           height={100}
           src="./assets/images/nodejs-1.svg"
           alt="nodejs"
-          className="absolute hidden lg:block lg:top-[360px] lg:left-[850px] xl:top-[350px] xl:left-[900px] animate-updown"
+          className="absolute top-[60%] right-[15%] animate-updown"
         />
         <Image
           width={50}
           height={50}
           src="./assets/images/logo-javascript.svg"
           alt="javascript"
-          className="absolute hidden xl:block xl:top-[450px] xl:left-[750px] animate-updown"
+          className="absolute top-[78%] right-[30%] animate-updown"
         />
 
         <Image
@@ -159,14 +166,21 @@ const Hero: FC<P> = ({ sctionRef }) => {
           height={60}
           src="./assets/images/graphql-logo-2.svg"
           alt="graphql"
-          className="absolute hidden lg:block lg:top-[450px] lg:left-[700px]  xl:top-[450px] xl:left-[450px]  animate-updown"
+          className="absolute  top-[60%] left-[48%]  animate-updown"
         />
         <Image
           width={150}
           height={150}
           src="./assets/images/jest-2.svg"
           alt="jest"
-          className="absolute hidden xl:block  xl:top-[430px] xl:left-[1100px] animate-updown"
+          className="absolute  top-[70%] right-[1%]  animate-updown"
+        />
+        <Image
+          width={50}
+          height={50}
+          src="./assets/images/postgresql.svg"
+          alt="postgresql"
+          className="absolute top-[78%] left-[3%]   animate-updown"
         />
 
         <Image
@@ -174,7 +188,7 @@ const Hero: FC<P> = ({ sctionRef }) => {
           height={65}
           src="./assets/images/kubernetes-icon.svg"
           alt="kubernetes"
-          className="absolute hidden lg:block lg:top-[350px] lg:left-[200px] xl:top-[350px] xl:left-[250px] animate-updown"
+          className="absolute  top-[77%] left-[30%]  animate-updown"
         />
 
         <Image
@@ -182,21 +196,21 @@ const Hero: FC<P> = ({ sctionRef }) => {
           height={80}
           src="./assets/images/docker-icon.svg"
           alt="docker"
-          className="absolute hidden md:block md:top-[420px] md:left-[200px] lg:top-[450px] lg:left-[350px]  xl:top-[570px] xl:left-[200px]  animate-updown"
+          className="absolute top-[88%] left-[15%] animate-updown"
         />
         <Image
           width={75}
           height={75}
           src="./assets/images/aws-2.svg"
           alt="aws"
-          className="absolute hidden xl:block xl:top-[570px] xl:left-[950px] animate-updown"
+          className="absolute top-[90%] right-[15%] animate-updown"
         />
         <Image
           width={60}
           height={60}
           src="./assets/images/scrum-1.svg"
           alt="scrum"
-          className="absolute hidden xl:block  xl:top-[450px] xl:left-[75px] animate-updown"
+          className="absolute top-[45%] right-[3%]   animate-updown"
         />
       </div>
 
