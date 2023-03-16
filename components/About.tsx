@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import Image from "next/image";
 
 interface P {
   sctionRef: React.LegacyRef<HTMLElement> | undefined;
@@ -8,14 +9,14 @@ const About: FC<P> = ({ sctionRef }) => {
     <section
       ref={sctionRef}
       id="about"
-      className="bg-indigo-600 flex flex-col md:flex-row items-center"
+      className=" bg-indigo-600 flex flex-col md:flex-row items-center justify-center  min-h-screen"
     >
       {/* <div className="justify-center block w-full h-full my-5  text-white font-bold text-2xl text-center ">
         About Me
       </div>
       <div className="flex flex-col md:flex-row"> */}
-      <div className="w-full md:w-1/3  ">
-        <div className="opacity-20 -z-10">
+      <div className="relative w-full h-full md:w-1/3  ">
+        <div className="opacity-20 z-10 scale-110">
           <svg
             x="0px"
             y="0px"
@@ -46,6 +47,22 @@ const About: FC<P> = ({ sctionRef }) => {
               />
             </path>
           </svg>
+        </div>
+        <div className=" absolute top-[30%] left-[50%] z-20">
+          <Image
+            height={200}
+            width={200}
+            src="/assets/images/profile.jpg"
+            alt="profile"
+            className="rounded-full border-gray-200 border-8"
+          />
+        </div>
+        <div className=" absolute top-0 left-[10%] z-20 rounded-full border-gray-200 border-8 font-bold bg-indigo-700 w-44 h-44 text-center flex flex-col flex-wrap justify-center items-center  m-auto">
+          Senior Frontend Developer
+        </div>
+        <div className=" absolute top-[60%] left-[15%] z-20 rounded-full border-gray-200 border-8 font-bold bg-indigo-700 w-32 h-32 text-center flex flex-col justify-center items-center  m-auto">
+          <div className="text-2xl pb-2 bt-0">8+ </div>
+          <div className="text-sm">Years Of Experience</div>
         </div>
       </div>
       <div className="w-full md:w-1/2 "></div>
