@@ -9,7 +9,7 @@ const About: FC<P> = ({ sctionRef }) => {
     <section
       ref={sctionRef}
       id="about"
-      className=" bg-indigo-600 flex flex-col md:flex-row items-center justify-center  min-h-screen"
+      className=" bg-indigo-600 text-white flex flex-col md:flex-row items-center justify-center  min-h-screen"
     >
       {/* <div className="justify-center block w-full h-full my-5  text-white font-bold text-2xl text-center ">
         About Me
@@ -65,7 +65,24 @@ const About: FC<P> = ({ sctionRef }) => {
           <div className="text-sm">Years Of Experience</div>
         </div>
       </div>
-      <div className="w-full md:w-1/2 "></div>
+      <div className="w-full md:w-1/2 flex flex-col flex-wrap justify-center items-start mx-5 py-5">
+        <div className="text-2xl font-bold py-5"> About Me</div>
+        <div className="text-left">
+          A Software Engineer and senior Frontend developer with 8+ years of
+          professional software programming, proficiency in developing modular
+          Cloud-based applications with React.js (Typescript), Redux, testable
+          (TDD, E2E testing) and scalable (K8S) web solutions by living CI/CD
+          culture. Able to work in a cross-functional Scrum team and bridge the
+          gap between client needs and technology. A strong foundation in
+          computer science and a wide range of experience in agile software
+          development.
+        </div>
+        <div>
+          <button className="w-auto h-auto px-10 py-3  mt-10 rounded-xl border-white border-4">
+            Learn More
+          </button>
+        </div>
+      </div>
       {/* </div> */}
     </section>
   );
