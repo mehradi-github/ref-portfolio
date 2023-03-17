@@ -15,8 +15,8 @@ const About: FC<P> = ({ sctionRef }) => {
         About Me
       </div>
       <div className="flex flex-col md:flex-row"> */}
-      <div className="relative w-full h-full md:w-1/3  ">
-        <div className="opacity-20 z-10 scale-110">
+      <div className="relative w-full h-full md:w-1/2 lg:w-[40%]  ">
+        {/* <div className="opacity-20 z-10 scale-110">
           <svg
             x="0px"
             y="0px"
@@ -47,25 +47,31 @@ const About: FC<P> = ({ sctionRef }) => {
               />
             </path>
           </svg>
-        </div>
-        <div className=" absolute top-[30%] left-[50%] z-20">
-          <Image
-            height={200}
-            width={200}
-            src="/assets/images/profile.jpg"
-            alt="profile"
-            className="rounded-full border-gray-200 border-8"
-          />
-        </div>
-        <div className=" absolute top-0 left-[10%] z-20 rounded-full border-gray-200 border-8 font-bold bg-indigo-700 w-44 h-44 text-center flex flex-col flex-wrap justify-center items-center  m-auto">
-          Senior Frontend Developer
-        </div>
-        <div className=" absolute top-[60%] left-[15%] z-20 rounded-full border-gray-200 border-8 font-bold bg-indigo-700 w-32 h-32 text-center flex flex-col justify-center items-center  m-auto">
-          <div className="text-2xl pb-2 bt-0">8+ </div>
-          <div className="text-sm">Years Of Experience</div>
+        </div> */}
+        <div className="grid grid-cols-5 grid-rows-3  z-20 p-5">
+          <div className="row-start-1 col-start-2 ">
+            <div className=" rounded-full border-gray-200 border-8 font-bold bg-indigo-700 w-44 h-44 text-center flex flex-col flex-wrap justify-center items-center  m-auto">
+              Senior Frontend Developer
+            </div>
+          </div>
+          <div className="row-start-2 col-start-4 col-span-2">
+            <Image
+              height={180}
+              width={180}
+              src="/assets/images/profile.jpg"
+              alt="profile"
+              className="rounded-full border-gray-200 border-8 "
+            />
+          </div>
+          <div className="row-start-3 col-start-2 col-span-1 ">
+            <div className="rounded-full border-gray-200 border-8 font-bold bg-indigo-700 w-32 h-32 text-center flex flex-col justify-center items-center  m-auto">
+              <div className="text-2xl pb-2 bt-0">8+ </div>
+              <div className="text-sm">Years Of Experience</div>
+            </div>
+          </div>
         </div>
       </div>
-      <div className="w-full md:w-1/2 flex flex-col flex-wrap justify-center items-start mx-5 py-5">
+      <div className="w-full md:w-1/2 lg:w-[60%] flex flex-col flex-wrap justify-center items-start mx-5 py-5">
         <div className="text-2xl font-bold py-5"> About Me</div>
         <div className="text-left">
           A Software Engineer and senior Frontend developer with 8+ years of
