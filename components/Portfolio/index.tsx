@@ -2,6 +2,7 @@ import React, { FC, useState } from "react";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import ModalVideo from "react-modal-video";
 import "node_modules/react-modal-video/scss/modal-video.scss";
+import PortfolioItem from "./PortfolioItem";
 interface P {
   sctionRef: React.LegacyRef<HTMLElement> | undefined;
 }
@@ -31,7 +32,7 @@ const Portfolio: FC<P> = ({ sctionRef }) => {
               >
                 View video
               </div>
-              <div className="w-60 h-60 border-4 border-gray-300 ">B </div>
+              <PortfolioItem />
               <div className="w-60 h-40 border-4 border-gray-300 ">Y </div>
               <div className="w-60 h-60 border-4 border-gray-300 ">Z </div>
               <div className="w-60 h-80 border-4 border-gray-300 ">A1 </div>
