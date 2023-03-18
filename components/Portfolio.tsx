@@ -5,11 +5,7 @@ interface P {
 }
 const Portfolio: FC<P> = ({ sctionRef }) => {
   return (
-    <section
-      ref={sctionRef}
-      id="portfolio"
-      className="min-h-screen bg-indigo-500"
-    >
+    <section ref={sctionRef} id="portfolio" className="min-h-screen ">
       Recent Projects
     </section>
   );

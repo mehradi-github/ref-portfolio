@@ -71,9 +71,9 @@ const About: FC<P> = ({ sctionRef }) => {
           </div>
         </div>
       </div>
-      <div className="w-full md:w-1/2 lg:w-[60%] flex flex-col flex-wrap justify-center items-start mx-5 py-5">
+      <div className="w-full p-5 md:w-1/2 lg:w-[60%] flex flex-col flex-wrap justify-center items-start mx-5 py-5">
         <div className="text-2xl font-bold py-5"> About Me</div>
-        <div className="text-left">
+        <div className="text-left ">
           A Software Engineer and senior Frontend developer with 8+ years of
           professional software programming, proficiency in developing modular
           Cloud-based applications with React.js (Typescript), Redux, testable
