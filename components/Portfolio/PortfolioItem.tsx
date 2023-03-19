@@ -22,44 +22,75 @@ const PortfolioItem: FC = () => {
   }, []);
 
   return (
-    <div ref={refItem} className="relative w-full  border-gray-200 border-2 ">
+    <div
+      ref={refItem}
+      className="relative text-center mb-10 overflow-hidden cursor-pointer w-full border-gray-200 border-2 "
+    >
       <Image
         height={180}
         width={180}
         src="/assets/images/profile.jpg"
         alt="profile"
-        className="mx-auto"
+        className="mx-auto w-full"
       />
-      <div className="bg-gray-300 bottom-0 py-4 transition-all duration-500 ease-linear text-center">
-        <a href="#">
-          <h3 className="text-gray-700 font-semibold text-lg ">Profile</h3>
-        </a>
-        <h5>Next.js and TailwindCSS</h5>
-      </div>
+      {/* footer */}
       <div
         data-state={isActive}
-        className="w-full h-full top-0 hidden   opacity-0 -z-10 transition-all duration-[4s] ease-linear px-8 invisible translate-y-0 
-        data-[state=active]:-translate-y-full
-        data-[state=active]:block 
+        className="absolute w-full bottom-0 bg-gray-400 py-4 px-0 transition-all duration-[0.4s] ease-in-out 
+        data-[state=active]:opacity-0
         data-[state=active]:visible
-        data-[state=active]:opacity-80
-        data-[state=active]:z-0
-        
+        data-[state=active]:translate-y-full
         "
       >
-        <div className="absolute top-0 left-0 w-full h-full bg-indigo-500 text-white text-center py-2 flex flex-col justify-center items-center">
-          <ul className="">
-            <li key="1" className="flex justify-center">
+        <a href="#">
+          <h3 className="mb-1 ">Profile</h3>
+        </a>
+        <h5 className="font-semibold text-lg mb-0 text-gray-600">
+          Next.js and TailwindCSS
+        </h5>
+      </div>
+      {/* hover */}
+      <div
+        data-state={isActive}
+        className="absolute w-full top-0 h-full flex justify-center items-center py-0 px-8 bg-gradient-to-br from-purple-600 to-indigo-600  opacity-0 visible -z-10 transition-all duration-[0.4s] ease-in-out scale-90
+        data-[state=active]:opacity-75
+        data-[state=active]:visible
+        data-[state=active]:z-0
+        data-[state=active]:scale-100
+        "
+      >
+        <div className=" w-full text-white ">
+          <ul className=" mb-0">
+            <li key="1" className="inline-block">
               <a href="#">
                 <AiFillPlayCircle className="w-16 h-16 cursor-pointer animate-scale" />
               </a>
             </li>
           </ul>
-          <div className="divide-x-2 border-white"></div>
-          <a href="#">
-            <h3 className=" font-semibold text-lg my-2">Profile</h3>
+          <div
+            data-state={isActive}
+            className="divide-y divide-solid divide-white w-full block mx-0 my-5 scale-100 transition-all duration-[0.6s] ease-linear
+          data-[state=active]:scale-100
+          "
+          ></div>
+          <a href="#" className="text-sm  my-0 mx-1">
+            <h3
+              data-state={isActive}
+              className="text-lg font-semibold mt-1 translate-y-3 transition-all duration-500 ease-linear
+            data-[state=active]:translate-y-0
+            "
+            >
+              Profile
+            </h3>
           </a>
-          <h5 className="">Next.js and TailwindCSS</h5>
+          <h5
+            data-state={isActive}
+            className="font-semibold text-sm mb-0  translate-y-5 transition-all duration-[0.8s] ease-linear
+           data-[state=active]:translate-y-0
+          "
+          >
+            Next.js and TailwindCSS
+          </h5>
         </div>
       </div>
     </div>
