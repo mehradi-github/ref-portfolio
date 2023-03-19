@@ -1,8 +1,16 @@
-import React, { FC, useEffect, useRef, useState } from "react";
+import React, {
+  FC,
+  MouseEventHandler,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import Image from "next/image";
 import { AiFillPlayCircle } from "react-icons/ai";
-
-const PortfolioItem: FC = () => {
+interface P {
+  clickPlay: MouseEventHandler<HTMLElement> | undefined;
+}
+const PortfolioItem: FC<P> = ({ clickPlay }) => {
   const [isActive, setIsActive] = useState("");
   const refItem = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -52,7 +60,7 @@ const PortfolioItem: FC = () => {
       {/* hover */}
       <div
         data-state={isActive}
-        className="absolute w-full top-0 h-full flex justify-center items-center py-0 px-8 bg-gradient-to-br from-purple-600 to-indigo-600  opacity-0 visible -z-10 transition-all duration-[0.4s] ease-in-out scale-90
+        className="absolute w-full top-0 h-full flex justify-center items-center py-0 px-8 bg-indigo-600  opacity-0 visible -z-10 transition-all duration-[0.4s] ease-in-out scale-90
         data-[state=active]:opacity-75
         data-[state=active]:visible
         data-[state=active]:z-0
@@ -61,10 +69,8 @@ const PortfolioItem: FC = () => {
       >
         <div className=" w-full text-white ">
           <ul className=" mb-0">
-            <li key="1" className="inline-block">
-              <a href="#">
-                <AiFillPlayCircle className="w-16 h-16 cursor-pointer animate-scale" />
-              </a>
+            <li key="1" className="inline-block" onClick={clickPlay}>
+              <AiFillPlayCircle className="w-16 h-16 cursor-pointer animate-scale" />
             </li>
           </ul>
           <div

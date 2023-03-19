@@ -32,7 +32,7 @@ const Portfolio: FC<P> = ({ sctionRef }) => {
               >
                 View video
               </div>
-              <PortfolioItem />
+              <PortfolioItem clickPlay={() => setUrlVideo("L61p2uyiMSo")} />
               <div className="w-60 h-40 border-4 border-gray-300 ">Y </div>
               <div className="w-60 h-60 border-4 border-gray-300 ">Z </div>
               <div className="w-60 h-80 border-4 border-gray-300 ">A1 </div>
