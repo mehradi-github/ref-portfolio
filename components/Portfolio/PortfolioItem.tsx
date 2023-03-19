@@ -36,7 +36,7 @@ const PortfolioItem: FC = () => {
       {/* footer */}
       <div
         data-state={isActive}
-        className="absolute w-full bottom-0 bg-gray-400 py-4 px-0 transition-all duration-[0.4s] ease-in-out 
+        className="absolute w-full bottom-0 opacity-70 bg-gray-300 py-4 px-0 transition-all duration-[0.4s] ease-in-out 
         data-[state=active]:opacity-0
         data-[state=active]:visible
         data-[state=active]:translate-y-full
@@ -76,7 +76,7 @@ const PortfolioItem: FC = () => {
           <a href="#" className="text-sm  my-0 mx-1">
             <h3
               data-state={isActive}
-              className="text-lg font-semibold mt-1 translate-y-3 transition-all duration-500 ease-linear
+              className="text-lg font-semibold mt-0 translate-y-5 transition-all duration-500 ease-linear
             data-[state=active]:translate-y-0
             "
             >
@@ -85,7 +85,7 @@ const PortfolioItem: FC = () => {
           </a>
           <h5
             data-state={isActive}
-            className="font-semibold text-sm mb-0  translate-y-5 transition-all duration-[0.8s] ease-linear
+            className="font-semibold text-sm mb-0  translate-y-20 transition-all duration-700 ease-linear
            data-[state=active]:translate-y-0
           "
           >
