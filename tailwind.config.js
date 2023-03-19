@@ -19,9 +19,19 @@ module.exports = {
           "0%, 100%": { transform: "translateY(-10px)" },
           "50%": { transform: "translateY(10px)" },
         },
+        scale: {
+          "0%, 100%": { transform: "scaleX(1) scaleY(1)" },
+          "50%": { transform: "scaleX(0.9) scaleY(0.9)" },
+        },
+        up: {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-100px)" },
+        },
       },
       animation: {
         updown: "updown 4s cubic-bezier(0.54, 0.085, 0.5, 0.92) infinite",
+        scale: "scale 2s cubic-bezier(0.54, 0.085, 0.5, 0.92) infinite",
+        updown: "up 2s cubic-bezier(0.54, 0.085, 0.5, 0.92)",
       },
       // fontFamily: {
       //   poppins: ["Poppins"],
