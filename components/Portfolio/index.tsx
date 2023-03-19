@@ -12,7 +12,6 @@ const Portfolio: FC<P> = ({ sctionRef }) => {
     <section ref={sctionRef} id="portfolio" className="min-h-screen pt-20">
       <ModalVideo
         channel="youtube"
-        autoplay
         isOpen={urlVideo !== ""}
         videoId={urlVideo}
         onClose={() => setUrlVideo("")}
