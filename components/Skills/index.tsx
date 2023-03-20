@@ -6,7 +6,10 @@ interface P {
 }
 const Skills: FC<P> = ({ sctionRef }) => {
   return (
-    <section ref={sctionRef} id="skills" className="min-h-screen">
+    <section ref={sctionRef} id="skills" className="min-h-screen pt-20">
+      <h1 className="text-xl font-bold mx-auto w-full p-5 mb-10 text-center ">
+        Skills
+      </h1>
       <SkillSlider />
     </section>
   );
