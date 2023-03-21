@@ -5,7 +5,11 @@ interface P {
 }
 const Footer: FC<P> = ({ sctionRef }) => {
   return (
-    <section ref={sctionRef} id="contact" className="min-h-screen bg-gray-800">
+    <section
+      ref={sctionRef}
+      id="contact"
+      className="bg-[url('/assets/images/bg.svg')] bg-no-repeat bg-cover min-h-screen bg-gray-800"
+    >
       Get In Touch
     </section>
   );
