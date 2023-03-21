@@ -1,5 +1,5 @@
 import React, { FC, Fragment } from "react";
-import Progressbar from "./SkillCard";
+import SkillCard from "./SkillCard";
 import SkillSlider from "./SkillSlider";
 
 interface P {
@@ -14,13 +14,17 @@ const Skills: FC<P> = ({ sctionRef }) => {
       <div className=" w-full h-auto container mx-auto">
         <div className=" flex flex-row justify-center items-center flex-wrap ">
           {[
-            { percentage: 60 },
-            { percentage: 85 },
-            { percentage: 95 },
-            { percentage: 92 },
-            { percentage: 57 },
+            { percentage: 60, pathColor: "#aa6ffa" },
+            { percentage: 85, pathColor: "#aa6ffa" },
+            { percentage: 95, pathColor: "#aa6ffa" },
+            { percentage: 92, pathColor: "#aa6ffa" },
+            { percentage: 57, pathColor: "#aa6ffa" },
           ].map((v, i) => (
-            <Progressbar key={i} percentage={v.percentage} />
+            <SkillCard
+              key={i}
+              percentage={v.percentage}
+              pathColor={v.pathColor}
+            />
           ))}
         </div>
       </div>
