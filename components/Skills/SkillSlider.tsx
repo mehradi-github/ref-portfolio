@@ -7,24 +7,24 @@ import "swiper/scss";
 
 const SkillSlider: FC = () => {
   return (
-    <div className="w-full h-auto py-10 container mx-auto">
+    <div className="w-full h-auto pt-10 mx-auto">
       <Swiper
         slidesPerView={1}
-        spaceBetween={50}
-        className=""
+        spaceBetween={0}
+        className="flex justify-center"
         loop={true}
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,
         }}
         breakpoints={{
-          0: { slidesPerView: 2 },
-          480: { slidesPerView: 2 },
-          768: { slidesPerView: 3 },
-          1040: { slidesPerView: 4 },
-          1200: { slidesPerView: 5 },
-          1600: { slidesPerView: 5 },
-          1920: { slidesPerView: 5 },
+          0: { slidesPerView: 3 },
+          480: { slidesPerView: 3 },
+          768: { slidesPerView: 5 },
+          1040: { slidesPerView: 5 },
+          1200: { slidesPerView: 7 },
+          1600: { slidesPerView: 7 },
+          1920: { slidesPerView: 7 },
         }}
         modules={[Autoplay]}
       >
@@ -57,6 +57,7 @@ const SkillSlider: FC = () => {
               height={value.height}
               src={`/assets/images/${value.name}.svg`}
               alt={value.alt}
+              className="m-auto h-auto  self-center"
             />
           </SwiperSlide>
         ))}
