@@ -48,7 +48,7 @@ const Skills: FC<P> = ({ sctionRef }) => {
                 "HTML5",
                 "CSS3",
                 "Bootstrap",
-                "Material UI components",
+                "Material UI",
               ],
               percentage: 92,
               pathColor: "#aa6ffa",
