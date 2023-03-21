@@ -3,14 +3,13 @@ import Head from "next/head";
 import { Fragment } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 import About from "@/components/About";
 import Portfolio from "@/components/Portfolio";
 import Script from "next/script";
 import DarkMode from "@/utilits/darkMode";
 import ScrollToTop from "@/components/scrollToTop";
 import Skills from "@/components/Skills";
-import Footer from "@/components/Footer";
 import CustomCursor from "@/components/CustomCursor";
 
 // export interface CursorEffect {
@@ -42,8 +41,7 @@ const Layout: FC = () => {
       <About sctionRef={sectionRefs[1]} />
       <Portfolio sctionRef={sectionRefs[2]} />
       <Skills sctionRef={sectionRefs[3]} />
-      <Contact sctionRef={sectionRefs[4]} />
-      <Footer />
+      <Footer sctionRef={sectionRefs[4]} />
       <ScrollToTop />
       <CustomCursor />
     </Fragment>
