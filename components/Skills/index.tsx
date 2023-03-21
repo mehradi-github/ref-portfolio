@@ -12,17 +12,79 @@ const Skills: FC<P> = ({ sctionRef }) => {
         Skills
       </h1>
       <div className=" w-full h-auto container mx-auto">
-        <div className=" flex flex-row justify-center items-center flex-wrap ">
+        <div className=" flex flex-row justify-center items-start flex-wrap ">
           {[
-            { percentage: 60, pathColor: "#aa6ffa" },
-            { percentage: 85, pathColor: "#aa6ffa" },
-            { percentage: 95, pathColor: "#aa6ffa" },
-            { percentage: 92, pathColor: "#aa6ffa" },
-            { percentage: 57, pathColor: "#aa6ffa" },
+            {
+              title: "Scripts & Libraries",
+              items: [
+                "TypeScript",
+                "JavaScript (ES)",
+                "React.js",
+                "Next.js",
+                "Redux Toolkit",
+                "RTK Query",
+              ],
+              percentage: 97,
+              pathColor: "#aa6ffa",
+            },
+            {
+              title: "Testings",
+              items: [
+                "Unit tests (TDD)",
+                "Jest",
+                "React Testing Library",
+                "Mocha",
+                "sinon-chai",
+                "E2E testing (Cypress)",
+              ],
+              percentage: 95,
+              pathColor: "#aa6ffa",
+            },
+            {
+              title: "UI/UX",
+              items: [
+                "Sass",
+                "TailwindCSS",
+                "HTML5",
+                "CSS3",
+                "Bootstrap",
+                "Material UI components",
+              ],
+              percentage: 92,
+              pathColor: "#aa6ffa",
+            },
+            {
+              title: "APIs & Patterns",
+              items: [
+                "GraphQL",
+                "REST APIs",
+                "Node.js",
+                "NestJS",
+                "SOLID",
+                "Design Patterns",
+              ],
+              percentage: 85,
+              pathColor: "#aa6ffa",
+            },
+            {
+              title: "CI/CD & Agile",
+              items: [
+                "Kubernetes",
+                "Docker",
+                "Git",
+                "Jenkins",
+                "Ansible (AWS)",
+                "Agile (Scrum)",
+              ],
+              percentage: 78,
+              pathColor: "#aa6ffa",
+            },
           ].map((v, i) => (
             <SkillCard
               key={i}
               percentage={v.percentage}
+              title={v.title}
+              items={v.items}
               pathColor={v.pathColor}
             />
           ))}
