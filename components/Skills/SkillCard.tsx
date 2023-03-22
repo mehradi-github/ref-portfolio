@@ -10,7 +10,7 @@ interface P {
 const SkillCard: FC<P> = ({ title, items, percentage, pathColor }) => {
   return (
     <div className="flex flex-col justify-center items-start w-full sm:w-5/12 lg:w-3/12 xl:w-2/12  h-full border-[1px] border-solid border-gray-300 shadow-xl m-2">
-      <div className="mb-5 mt-10 self-center w-2/3 sm:w-1/3 lg:w-2/3 h-auto">
+      <div className="mb-5 mt-10 self-center w-1/3 sm:w-2/3 only-md:w-1/3 h-auto">
         <CircularProgressbar
           value={percentage}
           text={`${percentage}%`}
