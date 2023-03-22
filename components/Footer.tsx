@@ -38,22 +38,21 @@ const Footer: FC<P> = ({ sctionRef }) => {
           <div className="pt-5">
             <ul>
               <li className="flex flex-row items-center justify-start mt-5">
-                <IoLogoSkype className="text-2xl text-white mr-2" />{" "}
-                Skype:&nbsp;
                 <a href="https://join.skype.com/invite/Je4MWRIGs9Nf">
-                  mehradi.skype
+                  <IoLogoSkype className="text-2xl text-white mr-2 inline-block" />
+                  Skype: mehradi.skype
                 </a>
               </li>
               <li className="flex flex-row items-center justify-start mt-5">
-                <BsTelegram className="text-2xl text-white mr-2" />{" "}
-                Telegram:&nbsp;
-                <a href="https://t.me/smehradi">smehradi</a>
+                <a href="https://t.me/smehradi">
+                  <BsTelegram className="text-2xl text-white mr-2 inline-block" />
+                  Telegram: smehradi
+                </a>
               </li>
               <li className="flex flex-row items-center justify-start mt-5">
-                <IoMailSharp className="text-2xl text-white mr-2" />{" "}
-                Email:&nbsp;
                 <a href="mailto:mehradi.jobs@gmail.com">
-                  mehradi.jobs@gmail.com
+                  <IoMailSharp className="text-2xl text-white mr-2 inline-block" />
+                  Email: mehradi.jobs@gmail.com
                 </a>
               </li>
             </ul>
