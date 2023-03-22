@@ -118,7 +118,7 @@ const Footer: FC<P> = ({ sctionRef }) => {
           </div>
         </div>
       </div>
-      <div className="w-full p-5">
+      <div className="w-full p-5 pr-24">
         <div className="w-full border-t-[1px] border-gray-50 mt-10 border-solid"></div>
 
         <div className="flex flex-row items-center justify-center text-white text-sm pt-5">
