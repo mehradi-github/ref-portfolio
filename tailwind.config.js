@@ -28,9 +28,9 @@ module.exports = {
         updown: "updown 4s cubic-bezier(0.54, 0.085, 0.5, 0.92) infinite",
         scale: "scale 2s cubic-bezier(0.54, 0.085, 0.5, 0.92) infinite",
       },
-      // fontFamily: {
-      //   poppins: ["Poppins"],
-      // },
+      fontFamily: {
+        // poppins: ["Poppins"],
+      },
       screens: {
         "only-sm": { min: "640px", max: "767px" },
         // => @media (min-width: 640px and max-width: 767px) { ... }
