@@ -30,6 +30,27 @@ module.exports = {
           },
           to: { transform: "translate3d(0, 0, 0)" },
         },
+        slideInRight: {
+          from: {
+            transform: "translate3d(100%, 0, 0)",
+            visibility: "visible",
+          },
+          to: { transform: "translate3d(0, 0, 0)" },
+        },
+        slideInUp: {
+          from: {
+            transform: "translate3d(0,100%, 0)",
+            visibility: "visible",
+          },
+          to: { transform: "translate3d(0, 0, 0)" },
+        },
+        slideInDown: {
+          from: {
+            transform: "translate3d(0,-100%, 0)",
+            visibility: "visible",
+          },
+          to: { transform: "translate3d(0, 0, 0)" },
+        },
         slideOutLeft: {
           from: {
             transform: "translate3d(0, 0, 0)",
