@@ -11,7 +11,7 @@ const Skills: FC<P> = ({ sctionRef }) => {
       <h1 className="text-xl font-bold mx-auto w-full p-5 mb-10 text-center ">
         Skills
       </h1>
-      <div className=" w-full h-auto mx-auto">
+      <div className=" w-full h-auto mx-auto animate-[slideInLeft_1s_ease-in-out_1]">
         <div className=" flex flex-row justify-center items-start flex-wrap ">
           {[
             {

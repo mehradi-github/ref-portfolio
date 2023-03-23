@@ -23,6 +23,19 @@ module.exports = {
           "0%, 100%": { transform: "scaleX(1) scaleY(1)" },
           "50%": { transform: "scaleX(0.9) scaleY(0.9)" },
         },
+        slideInLeft: {
+          from: {
+            transform: "translate3d(-100%, 0, 0)",
+            visibility: "visible",
+          },
+          to: { transform: "translate3d(0, 0, 0)" },
+        },
+        slideOutLeft: {
+          from: {
+            transform: "translate3d(0, 0, 0)",
+          },
+          to: { visibility: "hidden", transform: "translate3d(-100%, 0, 0)" },
+        },
       },
       animation: {
         updown: "updown 4s cubic-bezier(0.54, 0.085, 0.5, 0.92) infinite",
