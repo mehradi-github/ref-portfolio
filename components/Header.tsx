@@ -85,6 +85,7 @@ const Header: FC<P> = ({ refs }) => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
   const handleScroll = (e: Event) => {
     var index = nearestIndex(window.scrollY, refs, 0, refs.length - 1);
+    setCtx({ ...ctx, currentSection: index });
     setActiveIndex(index);
   };
 

@@ -7,6 +7,7 @@ import { ProfileContext, ctx } from "@/context/context";
 export default function App({ Component, pageProps }: AppProps) {
   const initialContext: ctx = {
     cursorActive: false,
+    currentSection: 0,
     // cursorCoordinate: { x: 0, y: 0 },
   };
   const [ctx, setCtx] = useState(initialContext);

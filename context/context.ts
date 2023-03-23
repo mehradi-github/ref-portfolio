@@ -2,6 +2,7 @@ import { createContext, Dispatch, SetStateAction } from "react";
 
 export type ctx = {
   cursorActive: boolean;
+  currentSection: number;
   // cursorCoordinate: { x: number; y: number };
 };
 
