@@ -1,5 +1,4 @@
 import useVisibilityElement from "@/hooks/useVisibilityElement";
-import useVisibilitySection from "@/hooks/useVisibilitySection";
 import React, { FC, useEffect, useRef, useState } from "react";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar/";
 import "react-circular-progressbar/dist/styles.css";
@@ -14,6 +13,7 @@ const SkillCard: FC<P> = ({ title, items, percentage, pathColor }) => {
   const [present, setPresent] = useState(0);
   const refProgressbar = useRef<HTMLDivElement>(null);
   let isVisible = useVisibilityElement(refProgressbar);
+
   useEffect(() => {
     setPresent(isVisible ? percentage : 0);
   }, [isVisible]);
