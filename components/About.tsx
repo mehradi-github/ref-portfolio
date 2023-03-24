@@ -14,7 +14,7 @@ const About: FC<P> = ({ sctionRef }) => {
         <div className="  flex flex-col md:flex-row  items-center justify-center">
           <div
             data-effect={reveal}
-            className="relative w-full h-full md:w-[30%] lg:w-[40%]  data-[effect=enter]:animate-[slideInLeft_1200ms_ease-in-out_1]"
+            className="relative w-full h-full md:w-[30%] lg:w-[40%]  data-[effect=enter]:animate-[slideInLeft_1200ms_ease-in-out_1] data-[effect=reenter]:animate-[slideInLeft_1200ms_ease-in-out_1]"
           >
             <div className="absolute hidden lg:block lg:top-[23%] lg:right-[12%] xl:right-[35%] opacity-20 z-10  scale-150">
               <svg
@@ -78,7 +78,7 @@ const About: FC<P> = ({ sctionRef }) => {
           </div>
           <div
             data-effect={reveal}
-            className="data-[effect=enter]:animate-[slideInRight_1200ms_ease-in-out_1] w-full p-5  pb-10 md:pb-5 md:w-[70%] lg:w-[60%] flex flex-col flex-wrap justify-center items-start mx-5 py-5"
+            className="data-[effect=reenter]:animate-[slideInRight_1200ms_ease-in-out_1] data-[effect=enter]:animate-[slideInRight_1200ms_ease-in-out_1] w-full p-5  pb-10 md:pb-5 md:w-[70%] lg:w-[60%] flex flex-col flex-wrap justify-center items-start mx-5 py-5"
           >
             <div className="text-2xl font-bold py-5"> About Me</div>
             <div className="text-left ">
@@ -91,10 +91,14 @@ const About: FC<P> = ({ sctionRef }) => {
               needs and technology. A strong foundation in computer science and
               a wide range of experience in agile software development.
             </div>
-            <div>
-              <button className="w-auto h-auto px-10 py-3  mt-10 rounded-xl border-white border-4">
+            <div className=" my-10">
+              <a
+                className="w-auto h-auto px-10 py-3  rounded-xl border-white border-4"
+                href="https://www.linkedin.com/in/mehradi"
+                target="_blank"
+              >
                 Learn More
-              </button>
+              </a>
             </div>
           </div>
         </div>

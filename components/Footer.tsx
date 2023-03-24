@@ -41,13 +41,16 @@ const Footer: FC<P> = ({ sctionRef }) => {
             <div className=" p-10 md:p-5 ">
               <ul>
                 <li className="flex flex-row items-center justify-start  mt-5">
-                  <a href="https://join.skype.com/invite/Je4MWRIGs9Nf">
+                  <a
+                    href="https://join.skype.com/invite/Je4MWRIGs9Nf"
+                    target="_blank"
+                  >
                     <IoLogoSkype className="text-2xl text-white mr-2 inline-block" />
                     Skype: mehradi.skype
                   </a>
                 </li>
                 <li className="flex flex-row items-center justify-start mt-5">
-                  <a href="https://t.me/smehradi">
+                  <a href="https://t.me/smehradi" target="_blank">
                     <BsTelegram className="text-2xl text-white mr-2 inline-block" />
                     Telegram: smehradi
                   </a>
