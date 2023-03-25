@@ -8,9 +8,21 @@ import React, {
 import Image from "next/image";
 import { AiFillPlayCircle } from "react-icons/ai";
 interface P {
+  image: string;
+  height: number;
+  width: number;
+  title: string;
+  description: string;
   clickPlay: MouseEventHandler<HTMLElement> | undefined;
 }
-const PortfolioItem: FC<P> = ({ clickPlay }) => {
+const PortfolioItem: FC<P> = ({
+  image,
+  height,
+  width,
+  title,
+  description,
+  clickPlay,
+}) => {
   const [isActive, setIsActive] = useState("");
   const refItem = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -35,26 +47,28 @@ const PortfolioItem: FC<P> = ({ clickPlay }) => {
       className="relative text-center mb-10 overflow-hidden cursor-pointer w-full border-gray-200 border-2 "
     >
       <Image
-        height={180}
-        width={180}
-        src="/assets/images/profile.jpg"
-        alt="profile"
+        height={height}
+        width={width}
+        src={`/assets/images/portfolio/${image}`}
+        alt={description}
         className="mx-auto w-full"
       />
       {/* footer */}
       <div
         data-state={isActive}
-        className="absolute w-full bottom-0 opacity-70 bg-gray-300 py-4 px-0 transition-all duration-[0.4s] ease-in-out 
+        className="absolute w-full bottom-0 opacity-90  bg-gray-600 py-4 px-0 transition-all duration-[0.4s] ease-in-out 
         data-[state=active]:opacity-0
         data-[state=active]:visible
         data-[state=active]:translate-y-full
         "
       >
         <a href="#">
-          <h3 className="mb-1 ">Profile</h3>
+          <h3 className="font-semibold blur-0 text-lg mb-1 opacity-100 text-white">
+            {title}
+          </h3>
         </a>
-        <h5 className="font-semibold text-lg mb-0 text-gray-600">
-          Next.js and TailwindCSS
+        <h5 className="font-semibold text-base mb-0 opacity-100 text-white">
+          {description}
         </h5>
       </div>
       {/* hover */}
@@ -86,7 +100,7 @@ const PortfolioItem: FC<P> = ({ clickPlay }) => {
             data-[state=active]:translate-y-0
             "
             >
-              Profile
+              {title}
             </h3>
           </a>
           <h5
@@ -95,7 +109,7 @@ const PortfolioItem: FC<P> = ({ clickPlay }) => {
            data-[state=active]:translate-y-0
           "
           >
-            Next.js and TailwindCSS
+            {description}
           </h5>
         </div>
       </div>

@@ -163,7 +163,10 @@ const Header: FC<P> = ({ refs }) => {
           <a href="">
             <IoInformationCircle className="w-auto h-10 sm:h-14 text-blue-500 mr-4" />
           </a>
-          <div className="text-gray-500 font-bold text-xl"> Profile</div>
+          <div className="text-gray-500 dark:text-white font-bold text-xl">
+            {" "}
+            Profile
+          </div>
           {/* Mobile menu button */}
           <div className="flex md:hidden">
             <button

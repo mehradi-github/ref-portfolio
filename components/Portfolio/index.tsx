@@ -21,23 +21,28 @@ const Portfolio: FC<P> = ({ sctionRef }) => {
           Recent projects
         </h1>
         <div className="container mx-auto">
-          <ResponsiveMasonry
-            columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
-          >
+          <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 900: 2 }}>
             <Masonry gutter="10px">
-              <div
-                className="w-60 h-80 border-4 border-gray-300 "
-                onClick={() => setUrlVideo("L61p2uyiMSo")}
-              >
-                View video
-              </div>
-              <PortfolioItem clickPlay={() => setUrlVideo("L61p2uyiMSo")} />
-              <div className="w-60 h-40 border-4 border-gray-300 ">Y </div>
-              <div className="w-60 h-60 border-4 border-gray-300 ">Z </div>
-              <div className="w-60 h-80 border-4 border-gray-300 ">A1 </div>
-              <div className="w-60 h-60 border-4 border-gray-300 ">B1 </div>
-              <div className="w-60 h-40 border-4 border-gray-300 ">Y1 </div>
-              <div className="w-60 h-60 border-4 border-gray-300 ">Z1</div>
+              {[
+                {
+                  title: "Profile",
+                  description: "Next.js and TailwindCSS",
+                  image: "profile.png",
+                  height: 1216,
+                  width: 664,
+                  videoUrl: "L61p2uyiMSo",
+                },
+              ].map((v, i) => (
+                <PortfolioItem
+                  key={i}
+                  title={v.title}
+                  description={v.description}
+                  image={v.image}
+                  height={v.height}
+                  width={v.width}
+                  clickPlay={() => setUrlVideo(v.videoUrl)}
+                />
+              ))}
             </Masonry>
           </ResponsiveMasonry>
         </div>
