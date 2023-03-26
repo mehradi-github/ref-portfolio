@@ -1,6 +1,6 @@
 import React, { FC, useEffect, useRef, useState } from "react";
 import { FaChevronUp } from "react-icons/fa";
-const scrollToTop: FC = () => {
+const ScrollToTop: FC = () => {
   const [active, setActive] = useState("active");
   const offset = 150;
   const wrapRef = useRef<HTMLDivElement>(null);
@@ -65,4 +65,4 @@ const scrollToTop: FC = () => {
     </div>
   );
 };
-export default scrollToTop;
+export default ScrollToTop;

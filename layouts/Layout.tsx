@@ -8,7 +8,7 @@ import About from "@/components/About";
 import Portfolio from "@/components/Portfolio";
 import Script from "next/script";
 import DarkMode from "@/utilits/darkMode";
-import ScrollToTop from "@/components/scrollToTop";
+import ScrollToTop from "@/components/ScrollToTop";
 import Skills from "@/components/Skills";
 import CustomCursor from "@/components/CustomCursor";
 

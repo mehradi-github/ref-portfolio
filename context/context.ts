@@ -5,6 +5,11 @@ export type ctx = {
   currentSection: number;
   // cursorCoordinate: { x: number; y: number };
 };
-
-export const ProfileContext =
-  createContext<[ctx, Dispatch<SetStateAction<ctx>>]>(null);
+export const initialContext: ctx = {
+  cursorActive: false,
+  currentSection: 0,
+  // cursorCoordinate: { x: 0, y: 0 },
+};
+export const ProfileContext = createContext<
+  [ctx, Dispatch<SetStateAction<ctx>> | undefined]
+>([initialContext, undefined]);

@@ -5,11 +5,11 @@ const useCursorOver = (refs: RefObject<HTMLElement>[]) => {
   const [ctx, setCtx] = useContext(ProfileContext);
   useEffect(() => {
     const handleCursorEnter = (e: MouseEvent) => {
-      setCtx({ ...ctx, cursorActive: true });
+      setCtx!({ ...ctx, cursorActive: true });
       console.log("enter");
     };
     const handleCursorLeave = (e: MouseEvent) => {
-      setCtx({ ...ctx, cursorActive: false });
+      setCtx!({ ...ctx, cursorActive: false });
       console.log("leave");
     };
     refs.map((ref) => {
