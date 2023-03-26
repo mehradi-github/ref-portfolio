@@ -1,4 +1,5 @@
 import React, {
+  Attributes,
   FC,
   MouseEventHandler,
   useEffect,
@@ -7,7 +8,9 @@ import React, {
 } from "react";
 import Image from "next/image";
 import { AiFillPlayCircle } from "react-icons/ai";
-interface P {
+import useVisibilitySection from "@/hooks/useVisibilitySection";
+interface P extends Attributes {
+  itemKey: number;
   image: string;
   height: number;
   width: number;
@@ -16,6 +19,7 @@ interface P {
   clickPlay: MouseEventHandler<HTMLElement> | undefined;
 }
 const PortfolioItem: FC<P> = ({
+  itemKey,
   image,
   height,
   width,
@@ -25,6 +29,8 @@ const PortfolioItem: FC<P> = ({
 }) => {
   const [isActive, setIsActive] = useState("");
   const refItem = useRef<HTMLDivElement>(null);
+  let reveal = useVisibilitySection(2);
+
   useEffect(() => {
     const handleCursorEnter = (e: MouseEvent) => {
       setIsActive("active");
@@ -44,7 +50,8 @@ const PortfolioItem: FC<P> = ({
   return (
     <div
       ref={refItem}
-      className="relative text-center mb-10 overflow-hidden cursor-pointer w-full border-gray-200 border-2 "
+      data-effect={reveal}
+      className="data-[effect=enter]:animate-[slideInUp_1200ms_ease-in-out_1] data-[effect=reenter]:animate-[slideInUp_1200ms_ease-in-out_1] relative text-center mb-10 overflow-hidden cursor-pointer w-full border-gray-200 border-2 "
     >
       <Image
         height={height}

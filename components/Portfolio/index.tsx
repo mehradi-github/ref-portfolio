@@ -129,6 +129,7 @@ const Portfolio: FC<P> = ({ sctionRef }) => {
             ].map((v, i) => (
               <PortfolioItem
                 key={i}
+                itemKey={i}
                 title={v.title}
                 description={v.description}
                 image={v.image}
