@@ -88,7 +88,7 @@ const PortfolioItem: FC<P> = ({
         data-[state=active]:scale-100
         "
       >
-        <div className=" w-full text-white ">
+        <div className=" flex flex-col justify-center items-center w-full h-full text-white ">
           <ul className=" mb-0">
             <li key="1" className="inline-block" onClick={clickPlay}>
               <span className="relative flex h-16 w-16">
@@ -99,7 +99,7 @@ const PortfolioItem: FC<P> = ({
           </ul>
           <div
             data-state={isActive}
-            className="divide-y divide-solid divide-white w-full block mx-0 my-5 scale-100 transition-all duration-[0.6s] ease-linear
+            className="divide-y divide-solid divide-white w-full block mx-0 my-2 scale-100 transition-all duration-[0.6s] ease-linear
           data-[state=active]:scale-100
           "
           ></div>
@@ -115,7 +115,7 @@ const PortfolioItem: FC<P> = ({
           </a>
           <h5
             data-state={isActive}
-            className="font-semibold text-sm mb-0  translate-y-20 transition-all duration-700 ease-linear
+            className="font-semibold text-sm mb-0 pt-3  translate-y-20 transition-all duration-700 ease-linear
            data-[state=active]:translate-y-0
           "
           >
