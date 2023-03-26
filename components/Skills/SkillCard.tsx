@@ -13,10 +13,15 @@ const SkillCard: FC<P> = ({ title, items, percentage, pathColor }) => {
   const [present, setPresent] = useState(0);
   const refProgressbar = useRef<HTMLDivElement>(null);
   let isVisible = useVisibilityElement(refProgressbar);
+  const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
     setPresent(isVisible ? percentage : 0);
   }, [isVisible]);
+
+  useEffect(() => {
+    setIsDark(localStorage.getItem("theme") === "dark");
+  });
 
   return (
     <div className="flex flex-col justify-center items-start w-full sm:w-5/12 lg:w-3/12 xl:w-2/12  h-full border-[1px] border-solid border-gray-300 shadow-xl m-2">
@@ -33,7 +38,7 @@ const SkillCard: FC<P> = ({ title, items, percentage, pathColor }) => {
             textSize: "20px",
             pathTransitionDuration: 1,
             pathColor,
-            textColor: "#051441",
+            textColor: isDark ? "#f1f1fa" : "#051441",
             trailColor: "#f1f1fa",
           })}
         />
