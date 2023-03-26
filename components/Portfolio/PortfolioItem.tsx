@@ -91,7 +91,10 @@ const PortfolioItem: FC<P> = ({
         <div className=" w-full text-white ">
           <ul className=" mb-0">
             <li key="1" className="inline-block" onClick={clickPlay}>
-              <AiFillPlayCircle className="w-16 h-16 cursor-pointer animate-scale" />
+              <span className="relative flex h-16 w-16">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                <AiFillPlayCircle className="relative inline-flex w-16 h-16 cursor-pointer animate-scale" />
+              </span>
             </li>
           </ul>
           <div
