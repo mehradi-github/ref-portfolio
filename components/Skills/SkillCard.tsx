@@ -17,10 +17,12 @@ const SkillCard: FC<P> = ({ title, items, percentage, pathColor }) => {
 
   useEffect(() => {
     setPresent(isVisible ? percentage : 0);
-  }, [isVisible]);
+  }, [isVisible, percentage]);
 
   useEffect(() => {
-    setIsDark(localStorage.getItem("theme") === "dark");
+    if (typeof window !== "undefined") {
+      setIsDark(localStorage.getItem("theme") === "dark");
+    }
   });
 
   return (
