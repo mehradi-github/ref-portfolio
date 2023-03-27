@@ -44,7 +44,7 @@ const Hero: FC<P> = ({ sctionRef }) => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="#"
+            href="https://github.com/mehradi-github"
             aria-label="Github"
             ref={fllowRefs[0]}
           >
@@ -53,7 +53,7 @@ const Hero: FC<P> = ({ sctionRef }) => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="#"
+            href="https://www.youtube.com/@devtv2404"
             aria-label="Youtube"
             ref={fllowRefs[1]}
           >
@@ -62,7 +62,7 @@ const Hero: FC<P> = ({ sctionRef }) => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="#"
+            href="https://www.instagram.com/s_mehradi"
             aria-label="Instagram"
             ref={fllowRefs[2]}
           >
@@ -71,7 +71,7 @@ const Hero: FC<P> = ({ sctionRef }) => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="#"
+            href="https://www.linkedin.com/in/mehradi"
             aria-label="Linkedin"
             ref={fllowRefs[3]}
           >
@@ -80,7 +80,7 @@ const Hero: FC<P> = ({ sctionRef }) => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="#"
+            href="https://twitter.com/mehradi_info"
             aria-label="Twitter"
             ref={fllowRefs[4]}
           >
