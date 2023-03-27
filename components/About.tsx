@@ -10,7 +10,7 @@ const About: FC<P> = ({ sctionRef }) => {
 
   return (
     <section ref={sctionRef} id="about" className=" bg-indigo-600 text-white">
-      <div className="container mx-auto">
+      <div className="container mx-auto overflow-hidden">
         <div className="  flex flex-col md:flex-row  items-center justify-center">
           <div
             data-effect={reveal}
@@ -78,7 +78,7 @@ const About: FC<P> = ({ sctionRef }) => {
           </div>
           <div
             data-effect={reveal}
-            className="data-[effect=reenter]:animate-[slideInRight_1200ms_ease-in-out_1] data-[effect=enter]:animate-[slideInRight_1200ms_ease-in-out_1] w-full p-5  pb-10 md:pb-5 md:w-[70%] lg:w-[60%] flex flex-col flex-wrap justify-center items-start mx-5 py-5"
+            className="relative data-[effect=reenter]:animate-[slideInRight_1200ms_ease-in-out_1] data-[effect=enter]:animate-[slideInRight_1200ms_ease-in-out_1] w-full p-5  pb-10 md:pb-5 md:w-[70%] lg:w-[60%] flex flex-col flex-wrap justify-center items-start mx-5 py-5"
           >
             <div className="text-2xl font-bold py-5"> About Me</div>
             <div className="text-left ">
