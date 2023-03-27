@@ -28,7 +28,7 @@ const Portfolio: FC<P> = ({ sctionRef }) => {
                 image: "profile.png",
                 height: 765,
                 width: 418,
-                videoUrl: "L61p2uyiMSo",
+                videoUrl: "gj5Kp95PdGM",
               },
               {
                 title: "Mappay",
@@ -36,7 +36,7 @@ const Portfolio: FC<P> = ({ sctionRef }) => {
                 image: "mappay.png",
                 height: 765,
                 width: 418,
-                videoUrl: "L61p2uyiMSo",
+                videoUrl: "3CzisFnX5Cw",
               },
               {
                 title: "Evisa Express",
@@ -44,7 +44,7 @@ const Portfolio: FC<P> = ({ sctionRef }) => {
                 image: "evisa-express.png",
                 height: 765,
                 width: 418,
-                videoUrl: "L61p2uyiMSo",
+                videoUrl: "yBgJePqpOrw",
               },
               {
                 title: "Bazarzoom Dashboard",
@@ -52,7 +52,7 @@ const Portfolio: FC<P> = ({ sctionRef }) => {
                 image: "bazarzoom-dashboard.png",
                 height: 765,
                 width: 418,
-                videoUrl: "L61p2uyiMSo",
+                videoUrl: "wjShqD4U3K0",
               },
               {
                 title: "BazarZoom",
@@ -60,7 +60,7 @@ const Portfolio: FC<P> = ({ sctionRef }) => {
                 image: "bazarzoom.png",
                 height: 765,
                 width: 418,
-                videoUrl: "L61p2uyiMSo",
+                videoUrl: "KfIJ3w6yMCg",
               },
               {
                 title: "MFA Bot",
@@ -68,7 +68,7 @@ const Portfolio: FC<P> = ({ sctionRef }) => {
                 image: "mfa.png",
                 height: 765,
                 width: 418,
-                videoUrl: "L61p2uyiMSo",
+                videoUrl: "xoVrOq1eFvs",
               },
               {
                 title: "SigmaSaham Bot",
@@ -76,7 +76,7 @@ const Portfolio: FC<P> = ({ sctionRef }) => {
                 image: "sigmasaham.png",
                 height: 765,
                 width: 418,
-                videoUrl: "L61p2uyiMSo",
+                videoUrl: "GnDld6VbFQ4",
               },
               {
                 title: "Real Estate",
@@ -92,7 +92,7 @@ const Portfolio: FC<P> = ({ sctionRef }) => {
                 image: "sampna.png",
                 height: 765,
                 width: 418,
-                videoUrl: "L61p2uyiMSo",
+                videoUrl: "LMASHrhCDU0",
               },
               {
                 title: "Quran V1",
@@ -100,7 +100,7 @@ const Portfolio: FC<P> = ({ sctionRef }) => {
                 image: "fa-quran-v1.png",
                 height: 765,
                 width: 418,
-                videoUrl: "L61p2uyiMSo",
+                videoUrl: "EIqaO0vEddc",
               },
               {
                 title: "Spot",
@@ -108,7 +108,7 @@ const Portfolio: FC<P> = ({ sctionRef }) => {
                 image: "spot.png",
                 height: 765,
                 width: 418,
-                videoUrl: "L61p2uyiMSo",
+                videoUrl: "NO1NqAnJmEA",
               },
               {
                 title: "Mailchi",
@@ -116,7 +116,7 @@ const Portfolio: FC<P> = ({ sctionRef }) => {
                 image: "mailchi.png",
                 height: 765,
                 width: 418,
-                videoUrl: "L61p2uyiMSo",
+                videoUrl: "KUIqmm4Fq_s",
               },
               {
                 title: "Wide",
@@ -124,7 +124,7 @@ const Portfolio: FC<P> = ({ sctionRef }) => {
                 image: "wide.png",
                 height: 765,
                 width: 418,
-                videoUrl: "L61p2uyiMSo",
+                videoUrl: "vjEUeNUdhEY",
               },
             ].map((v, i) => (
               <PortfolioItem
