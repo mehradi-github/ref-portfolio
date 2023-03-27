@@ -31,8 +31,11 @@ const Layout: FC = () => {
   return (
     <Fragment>
       <Head>
-        <title>Resume | Portfolio</title>
-        <meta name="description" content="Resume and PortFolio" />
+        <title>Sadiq Mehradi | Resume | Portfolio</title>
+        <meta
+          name="description"
+          content="Sadiq Mehradi (Resume and PortFolio)"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
