@@ -44,7 +44,7 @@ const Portfolio: FC<P> = ({ sctionRef }) => {
                 image: "evisa-express.png",
                 height: 765,
                 width: 418,
-                videoUrl: "yBgJePqpOrw",
+                videoUrl: "_W92Cbh-eM8",
               },
               {
                 title: "Bazarzoom Dashboard",
@@ -76,7 +76,7 @@ const Portfolio: FC<P> = ({ sctionRef }) => {
                 image: "sigmasaham.png",
                 height: 765,
                 width: 418,
-                videoUrl: "GnDld6VbFQ4",
+                videoUrl: "E6JrCLPrWMg",
               },
               {
                 title: "Real Estate",
@@ -84,7 +84,7 @@ const Portfolio: FC<P> = ({ sctionRef }) => {
                 image: "real-estate.png",
                 height: 765,
                 width: 418,
-                videoUrl: "L61p2uyiMSo",
+                videoUrl: "PquUmdXax2I",
               },
               {
                 title: "Sampna",
@@ -124,7 +124,7 @@ const Portfolio: FC<P> = ({ sctionRef }) => {
                 image: "wide.png",
                 height: 765,
                 width: 418,
-                videoUrl: "vjEUeNUdhEY",
+                videoUrl: "H_2jWzwvUTQ",
               },
             ].map((v, i) => (
               <PortfolioItem
