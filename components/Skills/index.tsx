@@ -8,9 +8,9 @@ interface P {
 const Skills: FC<P> = ({ sctionRef }) => {
   return (
     <section ref={sctionRef} id="skills" className="w-full p-5 pt-20">
-      <h1 className="text-xl font-bold mx-auto w-full p-5 mb-10 text-center ">
+      <h2 className="text-xl font-bold mx-auto w-full p-5 mb-10 text-center ">
         Skills
-      </h1>
+      </h2>
       <div className=" w-full h-auto mx-auto ">
         <div className=" flex flex-row justify-center items-start flex-wrap ">
           {[

@@ -16,9 +16,9 @@ const Portfolio: FC<P> = ({ sctionRef }) => {
         onClose={() => setUrlVideo("")}
       />
       <div className="flex flex-col justify-center ">
-        <h1 className="text-xl font-bold mx-auto w-full p-5 mb-10 text-center ">
+        <h2 className="text-xl font-bold mx-auto w-full p-5 mb-10 text-center ">
           Recent projects
-        </h1>
+        </h2>
         <div className="container mx-auto">
           <div className="grid  sm:grid-cols-1   md:grid-cols-2 p-10 gap-5">
             {[

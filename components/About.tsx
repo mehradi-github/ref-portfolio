@@ -80,7 +80,7 @@ const About: FC<P> = ({ sctionRef }) => {
             data-effect={reveal}
             className="relative data-[effect=reenter]:animate-[slideInRight_1200ms_ease-in-out_1] data-[effect=enter]:animate-[slideInRight_1200ms_ease-in-out_1] w-full p-5  pb-10 md:pb-5 md:w-[70%] lg:w-[60%] flex flex-col flex-wrap justify-center items-start mx-5 py-5"
           >
-            <div className="text-2xl font-bold py-5"> About Me</div>
+            <h2 className="text-2xl font-bold py-5"> About Me</h2>
             <div className="text-left ">
               A Software Engineer and senior developer with 8+ years of
               professional software programming, proficiency in developing
