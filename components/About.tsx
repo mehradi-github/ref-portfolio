@@ -82,7 +82,7 @@ const About: FC<P> = ({ sctionRef }) => {
           >
             <div className="text-2xl font-bold py-5"> About Me</div>
             <div className="text-left ">
-              A Software Engineer and senior Frontend developer with 8+ years of
+              A Software Engineer and senior developer with 8+ years of
               professional software programming, proficiency in developing
               modular Cloud-based applications with React.js (Typescript),
               Redux, testable (TDD, E2E testing) and scalable (K8S) web

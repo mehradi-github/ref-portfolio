@@ -34,7 +34,7 @@ const Layout: FC = () => {
         <title>Sadiq Mehradi | Resume | Portfolio</title>
         <meta
           name="description"
-          content="Sadiq Mehradi (Resume and PortFolio)"
+          content="Sadiq Mehradi is a Software Engineer and senior developer with 12+ years of professional software programming, proficiency in developing modular Cloud-based applications, testable and scalable by living CI/CD culture. Able to work in a cross-functional Scrum team and bridge the gap between client needs and technology. A strong foundation in computer science and a wide range of experience in agile software development."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
