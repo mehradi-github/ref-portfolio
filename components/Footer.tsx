@@ -80,7 +80,7 @@ const Footer: FC<P> = ({ sctionRef }) => {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://www.youtube.com/@devtv2404"
+                href="https://www.youtube.com/@mehradi7772"
                 aria-label="Youtube"
               >
                 <IoLogoYoutube className=" mr-4" />
