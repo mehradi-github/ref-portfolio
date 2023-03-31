@@ -9,6 +9,8 @@ import {
 } from "react-icons/io5";
 import Image from "next/image";
 import useCursorOver from "@/hooks/useCursorOver";
+import Typewriter from "react-typewriter-animate";
+import "react-typewriter-animate/dist/Typewriter.css";
 
 interface P {
   sctionRef: React.LegacyRef<HTMLElement> | undefined;
@@ -40,7 +42,45 @@ const Hero: FC<P> = ({ sctionRef }) => {
         <h2 className="text-xl font-semibold text-center">
           Software Engineer and Senior Web Developer
         </h2>
-        <div className="w-auto flex flex-row items-center justify-center mt-24 z-30">
+        <div className="text-base font-bold text-center pt-8 pb-2 text-indigo-500">
+          <Typewriter
+            dataToRotate={[
+              [{ type: "word", text: "TypeScript" }],
+              [{ type: "word", text: "JavaScript (ES)" }],
+              [{ type: "word", text: "React.js" }],
+              [{ type: "word", text: "Next.js" }],
+              [{ type: "word", text: "Redux Toolkit" }],
+              [{ type: "word", text: "RTK Query" }],
+              [{ type: "word", text: "Unit tests (TDD)" }],
+              [{ type: "word", text: "Jest" }],
+              [{ type: "word", text: "React Testing Library" }],
+              [{ type: "word", text: "Mocha" }],
+              [{ type: "word", text: "sinon-chai" }],
+              [{ type: "word", text: "E2E testing (Cypress)" }],
+              [{ type: "word", text: "Sass" }],
+              [{ type: "word", text: "TailwindCSS" }],
+              [{ type: "word", text: "HTML5" }],
+              [{ type: "word", text: "CSS3" }],
+              [{ type: "word", text: "Storybook.js" }],
+              [{ type: "word", text: "Bootstrap" }],
+              [{ type: "word", text: "MUI" }],
+              [{ type: "word", text: "GraphQL" }],
+              [{ type: "word", text: "REST APIs" }],
+              [{ type: "word", text: "Node.js" }],
+              [{ type: "word", text: "NestJS" }],
+              [{ type: "word", text: "SOLID" }],
+              [{ type: "word", text: "Design Patterns" }],
+              [{ type: "word", text: "Kubernetes" }],
+              [{ type: "word", text: "Docker" }],
+              [{ type: "word", text: "Git" }],
+              [{ type: "word", text: "Jenkins" }],
+              [{ type: "word", text: "Ansible (AWS)" }],
+              [{ type: "word", text: "Agile (Scrum)" }],
+            ]}
+            loop={true}
+          />
+        </div>
+        <div className="w-auto flex flex-row items-center justify-center mt-10 z-30">
           <a
             target="_blank"
             rel="noopener noreferrer"
