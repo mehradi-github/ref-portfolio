@@ -54,7 +54,7 @@ const About: FC<P> = ({ sctionRef }) => {
             <div className="grid grid-cols-1 lg:grid-cols-5 grid-rows-1 md:grid-rows-3  p-5">
               <div className="lg:row-start-1 lg:col-start-2 hidden lg:inline-block ">
                 <div className=" rounded-full border-gray-200 border-8 font-bold bg-indigo-700 w-44 h-44 text-center flex flex-col flex-wrap justify-center items-center  m-auto">
-                  Senior Web Developer
+                  Senior Developer
                 </div>
               </div>
               <div className="row-start-2 lg:col-start-3 lg:col-span-3 z-20">
