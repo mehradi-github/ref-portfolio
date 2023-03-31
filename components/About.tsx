@@ -53,9 +53,9 @@ const About: FC<P> = ({ sctionRef }) => {
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-5 grid-rows-1 md:grid-rows-3  p-5">
               <div className="lg:row-start-1 lg:col-start-2 hidden lg:inline-block ">
-                <div className=" rounded-full border-gray-200 border-8 font-bold bg-indigo-700 w-44 h-44 text-center flex flex-col flex-wrap justify-center items-center  m-auto">
+                <h3 className=" rounded-full border-gray-200 border-8 font-bold bg-indigo-700 w-44 h-44 text-center flex flex-col flex-wrap justify-center items-center  m-auto">
                   Senior Developer
-                </div>
+                </h3>
               </div>
               <div className="row-start-2 lg:col-start-3 lg:col-span-3 z-20">
                 <div className="flex justify-center w-full pt-10 md:pt-0">
@@ -71,7 +71,7 @@ const About: FC<P> = ({ sctionRef }) => {
               <div className="lg:row-start-3 lg:col-start-2 col-span-1 hidden lg:inline-block ">
                 <div className="rounded-full border-gray-200 border-8 font-bold bg-indigo-700 w-32 h-32 text-center flex flex-col justify-center items-center  m-auto">
                   <div className="text-2xl pb-2 bt-0">8+ </div>
-                  <div className="text-sm">Years Of Experience</div>
+                  <h3 className="text-sm">Years Of Experience</h3>
                 </div>
               </div>
             </div>
