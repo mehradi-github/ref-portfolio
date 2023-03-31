@@ -33,54 +33,44 @@ const Hero: FC<P> = ({ sctionRef }) => {
       className="min-h-screen flex align-middle"
     >
       <div className="container mx-auto flex flex-col items-center justify-center lg:mt-10 sm:pt-10 sm:pb-16">
-        <p className="block text-base font-bold mt-4 lg:mt-0 text-center">
-          Hello, My name is
-        </p>
+        <h2 className="block text-base font-bold mt-4 lg:mt-0 text-center">
+          Software Engineer <span className="text-indigo-600">&</span> Senior
+          Developer
+        </h2>
         <h1 className="block text-6xl md:text-8xl font-bold leading-loose my-4 md:my-16 text-center ">
           Sadiq <span className="text-indigo-600">Mehradi</span>
         </h1>
-        <h2 className="text-xl font-semibold text-center">
-          Software Engineer and Senior Web Developer
-        </h2>
-        <div className="text-base font-bold text-center pt-8 pb-2 text-indigo-500">
-          <Typewriter
-            dataToRotate={[
-              [{ type: "word", text: "TypeScript" }],
-              [{ type: "word", text: "JavaScript (ES)" }],
-              [{ type: "word", text: "React.js" }],
-              [{ type: "word", text: "Next.js" }],
-              [{ type: "word", text: "Redux Toolkit" }],
-              [{ type: "word", text: "RTK Query" }],
-              [{ type: "word", text: "Unit tests (TDD)" }],
-              [{ type: "word", text: "Jest" }],
-              [{ type: "word", text: "React Testing Library" }],
-              [{ type: "word", text: "Mocha" }],
-              [{ type: "word", text: "sinon-chai" }],
-              [{ type: "word", text: "E2E testing (Cypress)" }],
-              [{ type: "word", text: "Sass" }],
-              [{ type: "word", text: "TailwindCSS" }],
-              [{ type: "word", text: "HTML5" }],
-              [{ type: "word", text: "CSS3" }],
-              [{ type: "word", text: "Storybook.js" }],
-              [{ type: "word", text: "Bootstrap" }],
-              [{ type: "word", text: "MUI" }],
-              [{ type: "word", text: "GraphQL" }],
-              [{ type: "word", text: "REST APIs" }],
-              [{ type: "word", text: "Node.js" }],
-              [{ type: "word", text: "NestJS" }],
-              [{ type: "word", text: "SOLID" }],
-              [{ type: "word", text: "Design Patterns" }],
-              [{ type: "word", text: "Kubernetes" }],
-              [{ type: "word", text: "Docker" }],
-              [{ type: "word", text: "Git" }],
-              [{ type: "word", text: "Jenkins" }],
-              [{ type: "word", text: "Ansible (AWS)" }],
-              [{ type: "word", text: "Agile (Scrum)" }],
-            ]}
-            loop={true}
-          />
-        </div>
-        <div className="w-auto flex flex-row items-center justify-center mt-10 z-30">
+        <h3 className="text-base font-bold text-center pt-14">
+          Skills: &nbsp;
+          <span className="text-green-600">
+            <Typewriter
+              dataToRotate={[
+                [{ type: "word", text: "Time management" }],
+                [{ type: "word", text: "Communication" }],
+                [{ type: "word", text: "Adaptability" }],
+                [{ type: "word", text: "Problem-solving" }],
+                [{ type: "word", text: "Teamwork" }],
+                [{ type: "word", text: "Creativity" }],
+                [{ type: "word", text: "Leadership" }],
+                [{ type: "word", text: "Interpersonal skills" }],
+                [{ type: "word", text: "Work ethic" }],
+                [{ type: "word", text: "Attention to detail" }],
+                [{ type: "word", text: "Active listening " }],
+                [{ type: "word", text: "Patience" }],
+                [{ type: "word", text: "Open-mindedness " }],
+                [{ type: "word", text: "Adaptability" }],
+                [{ type: "word", text: "Problem-solving" }],
+                [{ type: "word", text: "Critical thinking" }],
+                [{ type: "word", text: "Creativity " }],
+                [{ type: "word", text: "Accountability" }],
+                [{ type: "word", text: "Confidence" }],
+                [{ type: "word", text: "Time and project management" }],
+              ]}
+              loop={true}
+            />
+          </span>
+        </h3>
+        <div className="w-auto flex flex-row items-center justify-center mt-14 z-30">
           <a
             target="_blank"
             rel="noopener noreferrer"
