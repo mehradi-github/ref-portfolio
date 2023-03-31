@@ -38,7 +38,7 @@ const Hero: FC<P> = ({ sctionRef }) => {
           Sadiq <span className="text-indigo-600">Mehradi</span>
         </h1>
         <h2 className="text-xl font-semibold text-center">
-          Software Engineer and Senior Frontend Developer
+          Software Engineer and Senior Web Developer
         </h2>
         <div className="w-auto flex flex-row items-center justify-center mt-24 z-30">
           <a
