@@ -66,4 +66,4 @@ npm i -D sass tailwind-styled-components
 ```
 ## Deploy on Vercel
 
-For more details, check out Deploy [Next.js deployment documentation](https://nextjs.org/docs/deployment) on [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme).
+For more details, check out deploy [Next.js deployment documentation](https://nextjs.org/docs/deployment) on [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme).
