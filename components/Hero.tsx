@@ -83,7 +83,7 @@ const Hero: FC<P> = ({ sctionRef }) => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://www.youtube.com/@mehradi7772"
+            href="https://www.youtube.com/@s.mehradi"
             aria-label="Youtube"
             ref={fllowRefs[1]}
           >
